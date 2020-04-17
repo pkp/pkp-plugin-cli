@@ -11,13 +11,9 @@ const chalk = require('chalk')
  * @param {string} filePath the path to the file to parse and extract the releases info from
  */
 const extractData = async args => {
-  console.log(
-    chalk.blueBright(
-      `Extracting releases \r\n   input (${args.input}), output (${args.output})`
-    )
-  )
+  console.log(chalk.blueBright(`Extracting releases (${args.input})`))
   const filePath = args.input
-  const outFile = args.output
+  const outFile = `${__dirname}/${Date.now()}.temp`
 
   const xml = await readFile(filePath)
   try {
@@ -39,7 +35,8 @@ const extractData = async args => {
     })
     await writeFile(outFile, packagesWithSums)
 
-    console.log(chalk.greenBright(`Extracted data successfuly. ${outFile}`))
+    console.log(chalk.blueBright(`Extracted data successfuly. ${outFile}`))
+    return outFile
   } catch (err) {
     throw err
   }

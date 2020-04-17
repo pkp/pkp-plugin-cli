@@ -5,9 +5,7 @@ module.exports = args => {
   console.log('')
   console.log(
     chalk.white(
-      chalk.green(
-        'validate-releases --input file/input.xml --output file/output'
-      ),
+      chalk.green('validate-releases --input file/input.xml'),
       ' extracts all releases for all plugins from a plugins.xml file and validates their MD5 checksum (used internally by the CI tool)'
     )
   )
