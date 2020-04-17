@@ -3,10 +3,6 @@ const xml2js = require('xml2js')
 const parser = new xml2js.Parser()
 const chalk = require('chalk')
 
-const args = {
-  filePath: process.argv[2] || `${__dirname}/../plugins.xml`
-}
-
 /**
  * The function loops through the plugins and their releases and creates a text file containing a list
  * of the releases and their MD5 sums This is then consument by the bash script "checkMD5sum" that
@@ -41,7 +37,7 @@ const extractData = async args => {
         packagesWithSums += expectedMd5Sum + ':' + release.package[0] + '\n'
       })
     })
-    writeFile(outFile, packagesWithSums)
+    await writeFile(outFile, packagesWithSums)
 
     console.log(chalk.greenBright(`Extracted data successfuly. ${outFile}`))
   } catch (err) {
