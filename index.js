@@ -2,7 +2,7 @@ const minimist = require('minimist')
 
 const help = require('./src/help')
 const version = require('./src/version')
-const extractsReleases = require('./src/extract-releases')
+const validateAllReleases = require('./src/validate-all-releases')
 
 const start = async args => {
   const params = minimist(args)
@@ -17,10 +17,10 @@ const start = async args => {
   }
 
   switch (cmd) {
-    case 'extract-releases':
-    case 'extractreleases':
-    case 'extractReleases':
-      extractsReleases(params)
+    case 'validate-releases':
+    case 'validatereleases':
+    case 'validateReleases':
+      validateAllReleases(params)
       break
     case 'version':
       version(params)

@@ -15,7 +15,7 @@ A set of tools by the [Public Knowledge Project](https://docs.pkp.sfu.ca/) to he
 
 ## Commands
 
-### `pkp-plugin extract-releases --input ./plugins.xml --output ./out/plugins-output.txt`
+### `pkp-plugin validate-releases --input ./plugins.xml --output ./out/plugins-output.txt`
 
 (internal tool) used by the CI job for plugins registry to extract the releases from `plugins.xml` and validate their MD5 hashes
 

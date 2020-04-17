@@ -6,11 +6,16 @@
   "scripts": {
     "test": "echo \"no test specified yet\" "
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kabaros/pkp-plugin-cli.git"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.0.0",
     "minimist": "^1.2.5",
+    "shelljs": "^0.8.3",
     "xml2js": "^0.4.23"
   }
 }
