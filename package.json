@@ -17,5 +17,9 @@
     "minimist": "^1.2.5",
     "shelljs": "^0.8.3",
     "xml2js": "^0.4.23"
-  }
+  },
+  "bin": {
+    "pkp-plugin": "./bin/index.js"
+  },
+  "preferGlobal": true
 }
