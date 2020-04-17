@@ -3,6 +3,7 @@ const minimist = require('minimist')
 const help = require('./src/help')
 const version = require('./src/version')
 const validateAllReleases = require('./src/validate-all-releases')
+const validateNewRelease = require('./src/validate-new-release')
 
 const start = async args => {
   const params = minimist(args)
@@ -17,17 +18,14 @@ const start = async args => {
   }
 
   switch (cmd) {
+    case 'validate-new-release':
+      return validateNewRelease(params)
     case 'validate-releases':
-    case 'validatereleases':
-    case 'validateReleases':
-      validateAllReleases(params)
-      break
+      return validateAllReleases(params)
     case 'version':
-      version(params)
-      break
+      return version(params)
     case 'help':
-      help(params)
-      break
+      return help(params)
     default:
       console.error(`"${cmd}" is not a valid command!`)
       break
