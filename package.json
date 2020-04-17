@@ -1,6 +1,6 @@
 {
   "name": "pkp-plugin-cli",
-  "version": "0.0.10",
+  "version": "0.1.0",
   "description": "PKP Plugins Registry CLI",
   "main": "index.js",
   "scripts": {
