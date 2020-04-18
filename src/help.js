@@ -14,4 +14,12 @@ module.exports = args => {
   log(
     'Validates the new releases added to a plugin.xml file (used internally by the CI tool)'
   )
+  log('')
+  warn('bump')
+  log('Bumps version.xml and update release date')
+  log('')
+  warn('release')
+  log(
+    'Creates a release of the package (commits version.xml, creates a release package and pushes it)'
+  )
 }
