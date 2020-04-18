@@ -32,7 +32,7 @@ const extractData = async args => {
         const expectedMd5Sum = release.$.md5
         const version = release.$.version
 
-        packagesWithSums += expectedMd5Sum + ':' + release.package[0] + '\n'
+        packagesWithSums += expectedMd5Sum + ',' + release.package[0] + '\n'
       })
     })
     await writeFile(outFile, packagesWithSums)
