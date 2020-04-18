@@ -1,7 +1,9 @@
-const { readFile, writeFile } = require('./helpers')
 const xml2js = require('xml2js')
+
+const { readFile, writeFile } = require('../utils/files')
+const { info } = require('../utils/log')
+
 const parser = new xml2js.Parser()
-const chalk = require('chalk')
 
 /**
  * The function loops through the plugins and their releases and creates a text file containing a list
@@ -11,7 +13,7 @@ const chalk = require('chalk')
  * @param {string} filePath the path to the file to parse and extract the releases info from
  */
 const extractData = async args => {
-  console.log(chalk.blueBright(`Extracting releases (${args.input})`))
+  info(`Extracting releases (${args.input})`)
   const filePath = args.input
   const outFile = `${__dirname}/${Date.now()}.temp`
 
@@ -35,7 +37,7 @@ const extractData = async args => {
     })
     await writeFile(outFile, packagesWithSums)
 
-    console.log(chalk.blueBright(`Extracted data successfuly. ${outFile}`))
+    info(`Extracted data successfuly. ${outFile}`)
     return outFile
   } catch (err) {
     throw err

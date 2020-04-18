@@ -1,11 +1,11 @@
 const shell = require('shelljs')
-const chalk = require('chalk')
-const downloadPackage = require('./download-package')
+const downloadPackage = require('../utils/download-package')
 const extractReleaseData = require('./extract-release-data')
-const checksumFile = require('./checkSumFile')
+const checksumFile = require('../utils/check-sum-file')
+const { error, success, info } = require('../utils/log')
 
 module.exports = async args => {
-  console.log(chalk.blueBright(`Checking new release`))
+  info(`Checking new release`)
   const diffFile = __dirname + '/diff.temp'
   const command = shell.exec(`git diff origin/master | grep ^+[^+]`)
   const changedLines = command.stdout
@@ -14,8 +14,15 @@ module.exports = async args => {
   const { package: packageUrl, md5: expectedMD5 } = extractReleaseData(
     changedLines
   )
-  console.log(chalk.blueBright(`Package url: ${packageUrl}`))
-  console.log(chalk.blueBright(`MD5: ${expectedMD5}`))
+
+  if (!expectedMD5 || !packageUrl) {
+    error(
+      'No new releases could be detected in the diff of the specified repo.'
+    )
+    return shell.exit(1)
+  }
+  info(`Package url: ${packageUrl}`)
+  info(`MD5: ${expectedMD5}`)
 
   // Downlaod package
   const downloadedFileName = __dirname + '/downloaded_package.tar.gz'
@@ -25,26 +32,21 @@ module.exports = async args => {
   const md5 = await checksumFile(downloadedFileName)
 
   if (md5 === expectedMD5) {
-    console.log(chalk.greenBright(`The MD5 of the downloaded file is correct`))
+    success(`The MD5 of the downloaded file is correct`)
   } else {
-    console.log(
-      chalk.redBright(
-        `The MD5 of the downloaded is incorrect. Expected ${expectedMD5}, Actual ${md5}`
-      )
+    error(
+      `The MD5 of the downloaded is incorrect. Expected ${expectedMD5}, Actual ${md5}`
     )
     shell.rm(downloadedFileName)
     shell.exit(1)
   }
 
-  console.log(chalk.blueBright(`MD5 of downloaded package: ${md5}`))
-
   // check contents of tar file
+  info('Checking contents of tar file')
   shell.exec(`tar -tf ${downloadedFileName}`) // ToDO .. check contents of the tar file
 
+  info('Deleting temporary file')
   shell.rm(downloadedFileName)
 
-  if (command.code !== 0) {
-    shell.echo('Error: checking new release failed')
-    shell.exit(1)
-  }
+  success('Validation succeeded.')
 }

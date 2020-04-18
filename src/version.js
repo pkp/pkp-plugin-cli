@@ -1,6 +1,6 @@
-const chalk = require('chalk')
+const { info } = require('./utils/log')
 
 module.exports = args => {
   const package = require('../package.json')
-  console.log(package.version)
+  info(package.version)
 }
