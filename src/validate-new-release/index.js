@@ -1,7 +1,7 @@
 const shell = require('shelljs')
-const downloadPackage = require('../utils/download-package')
-const extractReleaseData = require('./extract-release-data')
-const checksumFile = require('../utils/check-sum-file')
+const downloadPackage = require('../utils/downloadPackage')
+const extractReleaseData = require('./extractReleaseDataFromDiff')
+const checksumFile = require('../utils/checkSumFile')
 const { error, success, info } = require('../utils/log')
 
 module.exports = async args => {

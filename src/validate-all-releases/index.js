@@ -1,5 +1,5 @@
 const shell = require('shelljs')
-const extractReleases = require('../utils/plugins/extract-releases-from-xml')
+const extractReleases = require('../utils/plugins/extractAllReleasesFromXml')
 const { writeFile } = require('../utils/files')
 const { info } = require('../utils/log')
 
