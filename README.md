@@ -15,7 +15,7 @@ A set of tools by the [Public Knowledge Project](https://docs.pkp.sfu.ca/) to he
 
 ## Commands
 
-### pkp-plugin validate-releases --input ./plugins.xml
+### pkp-plugin validate-all-releases --input ./plugins.xml
 
 (used internally by CI) extracts all the releases from `plugins.xml` and validate their MD5 hashes
 

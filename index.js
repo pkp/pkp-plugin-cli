@@ -20,7 +20,7 @@ const start = async args => {
   switch (cmd) {
     case 'validate-new-release':
       return validateNewRelease(params)
-    case 'validate-releases':
+    case 'validate-all-releases':
       return validateAllReleases(params)
     case 'version':
       return version(params)
