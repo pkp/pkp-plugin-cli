@@ -1,7 +1,7 @@
 const xml2js = require('xml2js')
 
-const { readFile, writeFile } = require('../utils/files')
-const { info } = require('../utils/log')
+const { readFile } = require('../files')
+const { info } = require('../log')
 
 const parser = new xml2js.Parser()
 
@@ -12,33 +12,39 @@ const parser = new xml2js.Parser()
  *
  * @param {string} filePath the path to the file to parse and extract the releases info from
  */
-const extractData = async args => {
-  info(`Extracting releases (${args.input})`)
-  const filePath = args.input
-  const outFile = `${__dirname}/${Date.now()}.temp`
+const extractData = async filePath => {
+  info(`Extracting releases from ${filePath}`)
 
   const xml = await readFile(filePath)
+  const releases = []
+
   try {
     const result = await parser.parseStringPromise(xml)
 
-    let packagesWithSums = ''
-
     result.plugins.plugin.forEach(plugin => {
-      const pluginName = plugin.name[0]._
       plugin.release.forEach(release => {
-        if (release.package.length > 1)
+        if (release.package.length > 1) {
           throw 'Each release should have one package'
-
+        }
         const expectedMd5Sum = release.$.md5
         const version = release.$.version
 
-        packagesWithSums += expectedMd5Sum + ',' + release.package[0] + '\n'
+        releases.push({
+          expectedMd5Sum,
+          version,
+          url: release.package[0],
+          plugin: {
+            displayName: plugin.name[0]._,
+            name: plugin.$.product
+          }
+        })
       })
     })
-    await writeFile(outFile, packagesWithSums)
 
-    info(`Extracted data successfuly. ${outFile}`)
-    return outFile
+    info(
+      `Extracted data successfuly. ${result.plugins.plugin.length} plugins / ${releases.length} releases`
+    )
+    return releases
   } catch (err) {
     throw err
   }
