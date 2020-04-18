@@ -13,9 +13,11 @@ A set of tools by the [Public Knowledge Project](https://docs.pkp.sfu.ca/) to he
 
 `npm install -g pkp-plugin-cli`
 
+To update the tool, run `npm update -g pkp-plugin-cli`
+
 ## Commands
 
-### pkp-plugin validate-all-releases --input ./plugins.xml
+### pkp-plugin validate-all-releases --input ./path/to/plugins.xml
 
 (used internally by CI) extracts all the releases from `plugins.xml` and validate their MD5 hashes
 
@@ -25,7 +27,7 @@ A set of tools by the [Public Knowledge Project](https://docs.pkp.sfu.ca/) to he
 
 ### pkp-plugin version
 
-Outputs the version of the plugin
+Outputs the version of the installed plugin
 
 ### pkp-plugin help
 
