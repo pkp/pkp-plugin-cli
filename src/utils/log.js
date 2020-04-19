@@ -13,7 +13,7 @@ const warn = (...args) => {
 }
 
 const error = (...args) => {
-  console.log(chalk.redBright(args))
+  console.error(chalk.redBright(args))
 }
 
 const success = (...args) => {

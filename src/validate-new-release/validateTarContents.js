@@ -2,6 +2,9 @@ const shell = require('shelljs')
 const { log } = require('../utils/log')
 const extractAllReleasesFromXml = require('../utils/plugins/extractAllReleasesFromXml')
 
+/**
+ * Validates the contents of tarball (checks that it contains one folder matching the plugin name)
+ */
 module.exports = async (
   { tarFile, md5, packageUrl },
   pluginsFilePath = './plugins.xml'

@@ -18,36 +18,32 @@ const extractData = async filePath => {
   const xml = await readFile(filePath)
   const releases = []
 
-  try {
-    const result = await parser.parseStringPromise(xml)
+  const result = await parser.parseStringPromise(xml)
 
-    result.plugins.plugin.forEach(plugin => {
-      plugin.release.forEach(release => {
-        if (release.package.length > 1) {
-          throw 'Each release should have one package'
+  result.plugins.plugin.forEach(plugin => {
+    plugin.release.forEach(release => {
+      if (release.package.length > 1) {
+        throw 'Each release should have one package'
+      }
+      const expectedMd5Sum = release.$.md5
+      const version = release.$.version
+
+      releases.push({
+        expectedMd5Sum,
+        version,
+        url: release.package[0],
+        plugin: {
+          displayName: plugin.name[0]._,
+          name: plugin.$.product
         }
-        const expectedMd5Sum = release.$.md5
-        const version = release.$.version
-
-        releases.push({
-          expectedMd5Sum,
-          version,
-          url: release.package[0],
-          plugin: {
-            displayName: plugin.name[0]._,
-            name: plugin.$.product
-          }
-        })
       })
     })
+  })
 
-    info(
-      `Extracted data successfuly. ${result.plugins.plugin.length} plugins / ${releases.length} releases`
-    )
-    return releases
-  } catch (err) {
-    throw err
-  }
+  info(
+    `Extracted data successfuly. ${result.plugins.plugin.length} plugins / ${releases.length} releases`
+  )
+  return releases
 }
 
 module.exports = extractData

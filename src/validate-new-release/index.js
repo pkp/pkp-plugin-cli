@@ -5,7 +5,10 @@ const checksumFile = require('../utils/checkSumFile')
 const validateTarContents = require('./validateTarContents')
 const { error, success, info } = require('../utils/log')
 
-module.exports = async args => {
+/**
+ * Entry point for validate-new-release command
+ */
+module.exports = async () => {
   try {
     info(`Checking new release`)
     const diffFile = __dirname + '/diff.temp'
@@ -20,14 +23,13 @@ module.exports = async args => {
 
     if (!expectedMD5 || !packageUrl) {
       error(
-        'No new releases could be detected in the diff of the specified repo.'
+        'No new releases could be detected in the current folder. Make sure you run the command on a Git repo that has plugins.xml.'
       )
       return shell.exit(1)
     }
-    info(`Package url: ${packageUrl}`)
-    info(`MD5: ${expectedMD5}`)
+    info(`Package url: ${packageUrl}. Expected MD5: ${expectedMD5}`)
 
-    // Downlaod package
+    // Download package
     const downloadedFileName = __dirname + '/downloaded_package.tar.gz'
     await downloadPackage(packageUrl, downloadedFileName)
 
@@ -44,7 +46,7 @@ module.exports = async args => {
       shell.exit(1)
     }
 
-    // check contents of tar file
+    // validate contents of tar file
     await validateTarContents({ tarFile: downloadedFileName, md5, packageUrl })
 
     info('Deleting temporary file')
