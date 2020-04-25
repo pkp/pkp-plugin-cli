@@ -12,7 +12,7 @@ module.exports = args => {
   log('')
   warn('validate-new-release')
   log(
-    'Validates the new releases added to a plugin.xml file (used internally by the CI tool)'
+    'Validates the new releases added to a plugin.xml file. This command needs to run within a Git checkout of the plugin gallery XML repository (used internally by the CI tool)'
   )
   log('')
   warn('bump')
