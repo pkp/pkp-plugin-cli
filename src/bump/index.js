@@ -1,10 +1,14 @@
 const xml2js = require('xml2js')
 const inquirer = require('inquirer')
 const chalk = require('chalk')
+const execa = require('execa')
 
 const { parseStringPromise } = xml2js
 const { warn, error } = require('../utils/log')
 const { readFile, writeFile } = require('../utils/files')
+const getNextVersion = require('./getNextVersion')
+const newGithubReleaseUrl = require('new-github-release-url')
+const publishRelease = require('./publishRelease')
 
 module.exports = async args => {
   const file = await readVersionFile()
@@ -30,6 +34,7 @@ module.exports = async args => {
         type: 'input',
         name: 'release',
         message: `What is the version of the release you want to publish?`,
+        default: getNextVersion(release),
         validate: value => {
           if (!value) return 'Version number should be provided'
           if (!value.match(/^(\d+\.)?(\d+\.)?(\d+\.)?(\*|\d+)$/))
@@ -59,28 +64,14 @@ module.exports = async args => {
     )
 
     result = result.replace(
-      new RegExp(`<date>${date}</date`),
+      new RegExp(`<date>${date}</date>`),
       `<date>${answers.date}</date>`
     )
 
-    const { saveFile } = await inquirer.prompt([
-      {
-        type: 'confirm',
-        name: 'saveFile',
-        message: `Would you like to save the file and replace plugins.xml?`,
-        default: false
-      }
-    ])
+    await writeFile(`./version.xml`, result)
+    console.log(`Updated contents of version.xml`)
 
-    if (saveFile) {
-      await writeFile(`./version.xml`, result)
-      console.log(`Updated contents of version.xml`)
-    } else {
-      console.log(`${chalk.dim(result)}`)
-      console.log(
-        `Above is the content of the updated file. You can Copy/Paste it manually to plugins.xml.`
-      )
-    }
+    publishRelease(answers.release, pluginName)
   } catch (err) {
     if (err.isTtyError) {
       error(`Prompt couldn't be rendered in the current environment`)
