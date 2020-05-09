@@ -1,7 +1,16 @@
-const { warn } = require('../utils/log')
+const { warn, info } = require('../utils/log')
+const publishRelease = require('./publishRelease')
 
-module.exports = () => {
-  warn(
-    'to be implemented - Creates a release of the package (commits version.xml, creates a release package and pushes it)'
-  )
+module.exports = args => {
+  const {
+    _: [, pluginName],
+    newversion,
+    newVersion
+  } = args
+
+  const version = newversion || newVersion
+
+  info(`Releasing ${pluginName} (version to release: ${version})`)
+
+  publishRelease(version, pluginName)
 }

@@ -18,8 +18,8 @@ module.exports = args => {
   warn('bump')
   log('Bumps version.xml and update release date')
   log('')
-  warn('release')
+  warn('release pluginName --newversion 2.1.1')
   log(
-    'Creates a release of the package (commits version.xml, creates a release package and pushes it)'
+    'Creates a release of the package (commits version.xml, creates a release package, pushes it, create a release draft and uploads asset to it)'
   )
 }

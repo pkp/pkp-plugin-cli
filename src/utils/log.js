@@ -1,7 +1,7 @@
 const chalk = require('chalk')
 
 const info = (...args) => {
-  console.log(chalk.blueBright(args))
+  console.log(chalk.dim(args))
 }
 
 const log = (...args) => {

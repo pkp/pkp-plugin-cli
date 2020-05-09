@@ -18,6 +18,7 @@ module.exports = async (repoUrl, tag) => {
     '--tags',
     '--abbrev=0'
   ])
+
   const { stdout: body } = await execa('git', [
     'log',
     `${lastTag}..HEAD`,

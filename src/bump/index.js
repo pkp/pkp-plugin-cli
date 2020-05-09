@@ -1,17 +1,18 @@
 const xml2js = require('xml2js')
 const inquirer = require('inquirer')
 const chalk = require('chalk')
-const execa = require('execa')
-
-const { parseStringPromise } = xml2js
-const { warn, error } = require('../utils/log')
-const { readFile, writeFile } = require('../utils/files')
-const getNextVersion = require('./getNextVersion')
-const newGithubReleaseUrl = require('new-github-release-url')
-const publishRelease = require('./publishRelease')
+const process = require('process')
+const { warn, error, info } = require('../utils/log')
+const { writeFile } = require('../utils/files')
+const getNextVersion = require('../utils/getNextVersion')
+const publishRelease = require('../release/publishRelease')
+const readVersionFile = require('./readVersionFIle')
 
 module.exports = async args => {
   const file = await readVersionFile()
+  if (!file) return process.exit(1)
+
+  const { parseStringPromise } = xml2js
   const parsedXml = await parseStringPromise(file)
   const { version } = parsedXml
   const {
@@ -22,7 +23,7 @@ module.exports = async args => {
 
   const suggestedDate = new Date().toISOString().replace(/T.+$/, '')
 
-  console.log(
+  info(
     `\nPublish a new release of ${chalk.bold.magenta(pluginName)} ${chalk.dim(
       `(current: ${release}, date: ${date})`
     )}\n`
@@ -69,7 +70,7 @@ module.exports = async args => {
     )
 
     await writeFile(`./version.xml`, result)
-    console.log(`Updated contents of version.xml`)
+    info(`Updated contents of version.xml`)
 
     publishRelease(answers.release, pluginName)
   } catch (err) {
@@ -78,19 +79,5 @@ module.exports = async args => {
     } else {
       error(err)
     }
-  }
-}
-
-const readVersionFile = async fileName => {
-  try {
-    const file = await readFile('./version.xml')
-    return file
-  } catch (err) {
-    if (err.code === 'ENOENT') {
-      error(
-        'Could not find version.xml. Make sure to run the command in the root of your plugin.'
-      )
-    }
-    throw err
   }
 }
