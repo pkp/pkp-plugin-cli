@@ -4,7 +4,7 @@ const process = require('process')
 const { log, info, warn, error } = require('../utils/log')
 const git = require('../utils/git')
 
-const createTag = async (pluginName, newVersion, repoUrl) => {
+const createTag = async ({ pluginName, newVersion, repoUrl }) => {
   info(
     `We will commit the change, tag the commit and push it to Github. Then we will create a release draft, and upload an asset to the release.`
   )

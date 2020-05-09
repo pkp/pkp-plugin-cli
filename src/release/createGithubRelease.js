@@ -3,7 +3,7 @@ const execa = require('execa')
 const open = require('open')
 const newGithubReleaseUrl = require('new-github-release-url')
 
-module.exports = async (repoUrl, tag) => {
+module.exports = async ({ repoUrl, tag }) => {
   const { createRelease } = await inquirer.prompt([
     {
       type: 'confirm',
