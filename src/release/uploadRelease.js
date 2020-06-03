@@ -4,50 +4,31 @@ const chalk = require('chalk')
 const { createReadStream, statSync } = require('fs')
 const { basename } = require('path')
 const process = require('process')
+const { log, error, info, success, warn } = require('../utils/log')
 
-const { log, error, success, warn } = require('../utils/log')
+let octokit
 
 module.exports = async ({ tag, pluginName, tarFile }) => {
   const owner = 'kabaros'
   const repo = 'hypothesis'
 
-  let octokit
   let url
 
-  const { token } = await inquirer.prompt([
-    {
-      type: 'password',
-      name: 'token',
-      message: 'Enter your Github personal token:',
-      validate: async token => {
-        try {
-          octokit = new Octokit({
-            auth: `token ${token}`
-          })
+  const { GITHUB_TOKEN: tokenFromEnvironment } = process.env
 
-          url = await getReleaseUrl(octokit, { owner, repo, tag })
-          return true
-        } catch (err) {
-          const UNAUTHORIZED = 401
-          const NOT_FOUND = 404
-          if (err.status === UNAUTHORIZED) {
-            warn(
-              `The token you enetered is wrong. Make sure you have setup a personal token following the procedure here: ${chalk.underline(
-                'https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line'
-              )}`
-            )
-          }
-          if (err.status === NOT_FOUND) {
-            warn(
-              `We could not find the release ${tag}. Make sure you have published it on Github before proceeding.`
-            )
-          }
-          error(err)
-          return false
-        }
-      }
+  if (tokenFromEnvironment) {
+    info('We will use the Github Token provided in the environment variable.')
+
+    try {
+      url = await getReleaseUrl(tokenFromEnvironment, { owner, repo, tag })
+    } catch (err) {
+      error(err)
+      url = await promptForGithubToken({ owner, repo, tag })
     }
-  ])
+  }
+  else {
+    url = await promptForGithubToken({ owner, repo, tag })
+  }
 
   const { size } = statSync(tarFile)
 
@@ -78,8 +59,58 @@ module.exports = async ({ tag, pluginName, tarFile }) => {
   }
 }
 
-async function getReleaseUrl (octokit, { owner, repo, tag }) {
-  const release = await octokit.repos.getReleaseByTag({ owner, repo, tag })
+async function promptForGithubToken({ owner, repo, tag }) {
+  let url
 
-  return release.data.upload_url
+  const message = process.env.GITHUB_TOKEN ? 'Enter your Github personal token (or Enter to use the one already provided)'
+    : 'Enter your Github personal token'
+
+  const { token } = await inquirer.prompt([
+    {
+      type: 'password',
+      name: 'token',
+      message,
+      default: process.env.GITHUB_TOKEN,
+      validate: async (token) => {
+        if (!token) return false
+        try {
+          url = await getReleaseUrl(token, { owner, repo, tag })
+          return true
+        } catch (err) {
+          error(err)
+          return false
+        }
+      }
+    }
+  ])
+  return url
+}
+
+async function getReleaseUrl(token, { owner, repo, tag }) {
+  try {
+    octokit = new Octokit({
+      auth: `token ${token}`
+    })
+
+    const release = await octokit.repos.getReleaseByTag({ owner, repo, tag })
+
+    return release.data.upload_url
+  } catch (err) {
+    const UNAUTHORIZED = 401
+    const NOT_FOUND = 404
+    if (err.status === UNAUTHORIZED) {
+      warn(
+        `The token you enetered is wrong. Make sure you have setup a personal token following the procedure here: ${chalk.underline(
+          'https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line'
+        )}`
+      )
+    }
+    if (err.status === NOT_FOUND) {
+      warn(
+        `We could not find the release ${tag}. Make sure you have published it on Github before proceeding.`
+      )
+    }
+
+    throw (err)
+  }
 }

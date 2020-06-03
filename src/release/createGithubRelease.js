@@ -2,6 +2,7 @@ const inquirer = require('inquirer')
 const execa = require('execa')
 const open = require('open')
 const newGithubReleaseUrl = require('new-github-release-url')
+const { info } = require('../utils/log')
 
 module.exports = async ({ repoUrl, tag }) => {
   const { createRelease } = await inquirer.prompt([
@@ -31,5 +32,25 @@ module.exports = async ({ repoUrl, tag }) => {
     body
   })
 
+  info(`We will open Github on a browser for you to create the release.`)
+
   await open(url)
+
+  while (true) {
+    const created = await checkReleaseCreated()
+    if (created) break;
+  }
+}
+
+async function checkReleaseCreated() {
+  const { releaseCreated } = await inquirer.prompt([
+    {
+      type: 'confirm',
+      name: 'releaseCreated',
+      message: `Once you publish the release on Github, type 'Yes' to proceed with the following steps.`,
+      default: false
+    }
+  ])
+
+  return releaseCreated
 }

@@ -42,7 +42,7 @@ module.exports = async ({ pluginName: fileName }) => {
     ['./']
   )
 
-  log(`Tar file created. ${tempFileName}`)
+  log(`Tar file created.`)
 
   return tempFileName
 }
