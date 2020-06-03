@@ -2,6 +2,7 @@ const shell = require('shelljs')
 const extractReleases = require('../utils/plugins/extractAllReleasesFromXml')
 const { writeFile } = require('../utils/files')
 const { info, error } = require('../utils/log')
+const execa = require('execa')
 
 /**
  * Entry point for validate-all-releases command
@@ -14,11 +15,12 @@ module.exports = async args => {
     const releases = await extractReleases(inputFilePath)
 
     // Write releases data in a CSV file to be consumed by next bash script
-    const extractedDataFile = `${__dirname}/${Date.now()}.temp`
     let packagesWithSums = ''
     releases.forEach(({ expectedMd5Sum, url }) => {
       packagesWithSums += expectedMd5Sum + ',' + url + '\n'
     })
+
+    const { stdout: extractedDataFile } = await execa('mktemp', `${Date.now()}XXXXXXXX`)
     await writeFile(extractedDataFile, packagesWithSums)
 
     // use batch script to validate the MD5 checksum for all releases
