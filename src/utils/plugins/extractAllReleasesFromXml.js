@@ -1,3 +1,19 @@
+/**
+ * @file src/utils/plugins/extractAllReleasesFromXml.js
+ *
+ * Copyright (c) 2020 Simon Fraser University
+ * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ *
+ *
+ * @brief Helper function to extract all releases from a Plugin Gallery xml file
+ *
+ * The function loops through the plugins and their releases and creates a text file containing a list
+ * of the releases and their MD5 sums This is then consument by the bash script "checkMD5sum" that
+ * downloads all the releases and compares their MD5 sums with the content of the generated file
+ *
+ * @param {string} filePath the path to the file to parse and extract the releases info from
+ *
+ */
 const xml2js = require('xml2js')
 
 const { readFile } = require('../files')
@@ -5,13 +21,6 @@ const { info } = require('../log')
 
 const parser = new xml2js.Parser()
 
-/**
- * The function loops through the plugins and their releases and creates a text file containing a list
- * of the releases and their MD5 sums This is then consument by the bash script "checkMD5sum" that
- * downloads all the releases and compares their MD5 sums with the content of the generated file
- *
- * @param {string} filePath the path to the file to parse and extract the releases info from
- */
 const extractData = async filePath => {
   info(`Extracting releases from ${filePath}`)
 

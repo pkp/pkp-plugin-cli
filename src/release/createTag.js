@@ -1,3 +1,16 @@
+/**
+ * @file src/release/createTag.js
+ *
+ * Copyright (c) 2020 Simon Fraser University
+ * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ *
+ * @brief Helper for building a release (used by pkp-plugin release command)
+ *
+ * This helper performs these actions:
+ * - commit the change
+ * - tags the commit (the user can update the default tag suggested)
+ * - push the tag to Github
+ */
 const inquirer = require('inquirer')
 const execa = require('execa')
 const process = require('process')

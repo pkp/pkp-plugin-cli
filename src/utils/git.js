@@ -1,3 +1,12 @@
+/**
+ * @file src/utils/git.js
+ *
+ * Copyright (c) 2020 Simon Fraser University
+ * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ *
+ * @brief Git helpers for some operations needed by the tool
+ *
+ */
 const execa = require('execa')
 const githubUrlFromGit = require('github-url-from-git')
 const { log } = require('./log')

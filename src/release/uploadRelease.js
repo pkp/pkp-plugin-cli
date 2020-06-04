@@ -1,3 +1,15 @@
+/**
+ * @file src/release/uploadRelease.js
+ *
+ * Copyright (c) 2020 Simon Fraser University
+ * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ *
+ * @brief Helper for uploading a release to Github (used by pkp-plugin release command)
+ *
+ * This helper performs these actions:
+ * - prompts the user for Github token (or uses the one from env variable)
+ * - uses Github API to upload the release tar file (built by buildRelease in previous step) to Github
+ */
 const inquirer = require('inquirer')
 const { Octokit } = require('@octokit/rest')
 const chalk = require('chalk')

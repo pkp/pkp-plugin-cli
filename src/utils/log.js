@@ -1,3 +1,16 @@
+/**
+ * @file src/utils/log.js
+ *
+ * Copyright (c) 2020 Simon Fraser University
+ * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ *
+ * @module log
+ *
+ * @brief Wrapper around logging functions
+ *
+ * Provides a wrapper around console.log, info, error to consolidate the use of colors
+ * for different log actions (coloring using chalk library)
+ */
 const chalk = require('chalk')
 
 const info = (...args) => {

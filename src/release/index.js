@@ -1,3 +1,14 @@
+/**
+ * @file src/release/index.js
+ *
+ * Copyright (c) 2020 Simon Fraser University
+ * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ *
+ * @brief Entry point for release command
+ *
+ * This entry point only parses arguments. Orchestrating the work is handled by publishRelease module.
+ * 
+ */
 const { warn, info } = require('../utils/log')
 const publishRelease = require('./publishRelease')
 

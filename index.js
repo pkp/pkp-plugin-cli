@@ -1,3 +1,13 @@
+/**
+ * @file index.js
+ *
+ * Copyright (c) 2020 Simon Fraser University
+ * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ *
+ * @brief Entry point to the command line tool
+ *
+ * It parses the arguments passed to the command line tool and decides which module to invoke
+ */
 const minimist = require('minimist')
 const shell = require('shelljs')
 

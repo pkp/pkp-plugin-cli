@@ -1,12 +1,22 @@
+/**
+ * @file src/validate-all-releases/index.js
+ *
+ * Copyright (c) 2020 Simon Fraser University
+ * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ *
+ * @brief Entry point for validate-all-releases command
+ *
+ * This command (used by CI on Plugin Gallery repository) runs several checks on plugins.xml file:
+ * - Find all plugins and their releases in the XML file
+ * - Downloads all releases
+ * - Validates their MD5 checksum
+ */
 const shell = require('shelljs')
 const extractReleases = require('../utils/plugins/extractAllReleasesFromXml')
 const { writeFile } = require('../utils/files')
 const { info, error } = require('../utils/log')
 const execa = require('execa')
 
-/**
- * Entry point for validate-all-releases command
- */
 module.exports = async args => {
   try {
     const inputFilePath = getFilePathFromArgs(args)

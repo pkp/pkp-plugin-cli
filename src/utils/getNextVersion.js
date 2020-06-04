@@ -1,3 +1,12 @@
+/**
+ * @file src/utils/getNextVersion.js
+ *
+ * Copyright (c) 2020 Simon Fraser University
+ * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ *
+ * @brief Helper to try and guess the next version of a plugin based on the current version (found in version.xml)
+ *
+ */
 const getNextVersion = currentVersion => {
   try {
     const numbers = currentVersion.split('.').map(char => Number(char))

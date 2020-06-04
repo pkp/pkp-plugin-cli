@@ -1,3 +1,21 @@
+/**
+ * @file src/release/createGithubRelease.js
+ *
+ * Copyright (c) 2020 Simon Fraser University
+ * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ *
+ * @brief Helper for building a release (used by pkp-plugin release command)
+ *
+ * This helper performs these actions:
+ * - Prompts the user to confirm they want to create a release on Github
+ * - Opens the URL for Github release prepopulated with the release info
+ * - Waits for the user to confirm they have published the release
+ * 
+ * @notes 
+ * - We can not automatically know when the user has published the release so we require manual confirmation
+ *  - using open({wait: true}) could be used but it triggers when the browser is closed (not the tab),
+ *  also it does not work on windows
+ */
 const inquirer = require('inquirer')
 const execa = require('execa')
 const open = require('open')

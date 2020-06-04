@@ -1,3 +1,13 @@
+/**
+ * @file src/utils/files.js
+ *
+ * Copyright (c) 2020 Simon Fraser University
+ * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ *
+ * @module files
+ *
+ * @brief Helpers to promisify and simplify reading and writing files
+ */
 const fs = require('fs')
 
 const readFile = (fileName, encoding = 'utf8') => {

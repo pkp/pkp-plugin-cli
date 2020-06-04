@@ -1,3 +1,12 @@
+/**
+ * @file src/help.js
+ *
+ * Copyright (c) 2020 Simon Fraser University
+ * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ *
+ *
+ * @brief Prints the help of the command line (when running pkp-plugin help)
+ */
 const chalk = require('chalk')
 const { log, warn, info } = require('./utils/log')
 

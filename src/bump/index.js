@@ -1,3 +1,15 @@
+/**
+ * @file src/bump/index.js
+ *
+ * Copyright (c) 2020 Simon Fraser University
+ * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ *
+ * @brief Entry point for bump command
+ *
+ * This command (pkp-plugin bump) runs on a plugins root folder (containing version.xml).
+ * It provides an interactive CLI to collect the new version and release date of the plugin,
+ * then updates the XML file.
+ */
 const xml2js = require('xml2js')
 const inquirer = require('inquirer')
 const chalk = require('chalk')

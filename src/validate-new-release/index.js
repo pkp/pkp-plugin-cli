@@ -1,3 +1,19 @@
+/**
+ * @file src/validate-new-release/index.js
+ *
+ * Copyright (c) 2020 Simon Fraser University
+ * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ *
+ *
+ * @brief Entry point for validate-new-release command
+ *
+ * This command runs on Git checkout of Plugin Gallery repository
+ * and validates new releases added to the file. Some of the checks:
+ * - Extracts the release and md5 data from diff
+ * - Downloads the package specified in the release
+ * - Validates the MD5 of the package downloaded
+ * - Checks the contents of the tar file of the package are valid
+ */
 const shell = require('shelljs')
 const downloadPackage = require('../utils/downloadPackage')
 const extractReleaseDataFromDiff = require('./extractReleaseDataFromDiff')
