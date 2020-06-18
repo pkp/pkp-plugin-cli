@@ -16,13 +16,18 @@ const chalk = require('chalk')
 const { createReadStream, statSync } = require('fs')
 const { basename } = require('path')
 const process = require('process')
+const hostedGitInfo = require('hosted-git-info')
 const { log, error, info, success, warn, debug } = require('../utils/log')
+const { getRemoteUrl } = require('../utils/git')
 
 let octokit
 
 module.exports = async ({ tag, pluginName, tarFile }) => {
-  const owner = 'kabaros'
-  const repo = 'hypothesis'
+  const remoteUrl = await getRemoteUrl()
+  debug(`remote url for current folder: ${remoteUrl}`)
+
+  const { user: owner, project: repo } = hostedGitInfo.fromUrl(remoteUrl)
+  debug(`current repo info. Owner: ${owner}, Repo: ${repo}`)
 
   let url
 
@@ -104,9 +109,10 @@ async function getReleaseUrl(token, { owner, repo, tag }) {
       auth: `token ${token}`
     })
 
-    debug(`Getting release upload url. Owner: ${owner}. \n
-      \trepo ${repo}. \n
-      \ttag ${tag}`)
+    debug(`Getting release upload url.
+      \tOwner: ${owner}.
+      \trepo: ${repo}.
+      \ttag: ${tag}`)
 
     const release = await octokit.repos.getReleaseByTag({ owner, repo, tag })
 
