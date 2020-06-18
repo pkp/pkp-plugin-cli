@@ -13,6 +13,10 @@
  */
 const chalk = require('chalk')
 
+const debug = (...args) => {
+  if (process.env.DEBUG) { console.log(chalk.dim(args)) }
+}
+
 const info = (...args) => {
   console.log(chalk.dim(args))
 }
@@ -38,5 +42,6 @@ module.exports = {
   log,
   warn,
   error,
-  success
+  success,
+  debug
 }

@@ -12,24 +12,28 @@
  * - Validates their MD5 checksum
  */
 const shell = require('shelljs')
+const validateXml = require('../utils/plugins/validateXml')
 const extractReleases = require('../utils/plugins/extractAllReleasesFromXml')
 const { writeFile } = require('../utils/files')
-const { info, error } = require('../utils/log')
+const { info, error, debug } = require('../utils/log')
 const execa = require('execa')
 
 module.exports = async args => {
   try {
     const inputFilePath = getFilePathFromArgs(args)
 
-    // Extract the plugins information from an xml file
+    await validateXml(inputFilePath)
+
+    debug('Extracting the plugins info from xml file')
     const releases = await extractReleases(inputFilePath)
 
-    // Write releases data in a CSV file to be consumed by next bash script
+    debug('Write releases data in a CSV file to be consumed by next bash script')
     let packagesWithSums = ''
     releases.forEach(({ expectedMd5Sum, url }) => {
       packagesWithSums += expectedMd5Sum + ',' + url + '\n'
     })
 
+    debug('Writing release data into temp file')
     const { stdout: extractedDataFile } = await execa('mktemp', `${Date.now()}XXXXXXXX`)
     await writeFile(extractedDataFile, packagesWithSums)
 

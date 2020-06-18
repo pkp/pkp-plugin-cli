@@ -17,19 +17,27 @@
 const xml2js = require('xml2js')
 
 const { readFile } = require('../files')
-const { info } = require('../log')
+const { info, debug, error } = require('../log')
 
 const parser = new xml2js.Parser()
 
 const extractData = async filePath => {
-  info(`Extracting releases from ${filePath}`)
+  debug(`Extracting releases from ${filePath}`)
 
   const xml = await readFile(filePath)
   const releases = []
 
   const result = await parser.parseStringPromise(xml)
 
+  debug(`${result.plugins.plugin.length} plugins found`)
+
   result.plugins.plugin.forEach(plugin => {
+    if (!plugin.name) {
+      error(`${JSON.stringify(plugin)}\n`)
+      throw 'The last plugin does not have have a name attribute'
+    }
+
+    debug(`${plugin.name[0]._}: ${plugin.release.length} releases found`)
     plugin.release.forEach(release => {
       if (release.package.length > 1) {
         throw 'Each release should have one package'
@@ -46,6 +54,7 @@ const extractData = async filePath => {
           name: plugin.$.product
         }
       })
+      debug('')
     })
   })
 

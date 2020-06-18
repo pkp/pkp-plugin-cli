@@ -16,7 +16,7 @@ const chalk = require('chalk')
 const { createReadStream, statSync } = require('fs')
 const { basename } = require('path')
 const process = require('process')
-const { log, error, info, success, warn } = require('../utils/log')
+const { log, error, info, success, warn, debug } = require('../utils/log')
 
 let octokit
 
@@ -104,12 +104,20 @@ async function getReleaseUrl(token, { owner, repo, tag }) {
       auth: `token ${token}`
     })
 
+    debug(`Getting release upload url. Owner: ${owner}. \n
+      \trepo ${repo}. \n
+      \ttag ${tag}`)
+
     const release = await octokit.repos.getReleaseByTag({ owner, repo, tag })
 
     return release.data.upload_url
   } catch (err) {
     const UNAUTHORIZED = 401
     const NOT_FOUND = 404
+
+    debug(err)
+    debug(err.status)
+
     if (err.status === UNAUTHORIZED) {
       warn(
         `The token you enetered is wrong. Make sure you have setup a personal token following the procedure here: ${chalk.underline(
