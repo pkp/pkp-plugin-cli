@@ -55,7 +55,7 @@ const createTag = async ({ pluginName, newVersion, repoUrl }) => {
 }
 
 const getPossibleTag = (pluginName, newVersion) => {
-  const possibleTag = `${pluginName}-${newVersion.replace(/\./g, '_')}`.replace(
+  const possibleTag = `v${newVersion.replace(/\./g, '_')}`.replace(
     /_(\d+)$/,
     '-$1'
   )

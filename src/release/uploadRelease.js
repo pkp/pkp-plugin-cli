@@ -57,7 +57,7 @@ module.exports = async ({ tag, pluginName, tarFile }) => {
         'content-type': 'application/gzip',
         'content-length': size
       },
-      name: `${tag}.tar.gz`,
+      name: `${repo}-${tag}.tar.gz`,
       owner,
       repo
     })

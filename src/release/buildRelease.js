@@ -15,6 +15,7 @@ const inquirer = require('inquirer')
 const execa = require('execa')
 const tar = require('tar')
 const fs = require("fs");
+const shell = require('shelljs');
 
 const choices = ['No build step', 'composer install', 'gulp build']
 
@@ -51,11 +52,13 @@ module.exports = async ({ pluginName: fileName }) => {
   log(`Creating tar file..`)
 
   const { stdout: tempFileName } = await execa('mktemp', `${fileName}XXXXXXXX`)
+  debug(`tempFileName for Tar output: ${tempFileName}`)
 
   const result = await tar.c(
     {
       gzip: true,
-      file: tempFileName
+      file: tempFileName,
+      prefix: fileName
     },
     ['./']
   )
