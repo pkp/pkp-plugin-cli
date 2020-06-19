@@ -10,12 +10,13 @@
  * - prompts the user to run any extra build commands in the current folder (gulp build, composer install etc..)
  * - creates a Tar file from the current folder (in preparation to uploading it as an asset to the Github release)
  */
-const { error, log, info, debug } = require('../utils/log')
+const { error, log, warn, info, debug } = require('../utils/log')
 const inquirer = require('inquirer')
 const execa = require('execa')
 const tar = require('tar')
 const fs = require("fs");
 const shell = require('shelljs');
+const checkSumFile = require('../utils/checkSumFile');
 
 const choices = ['No build step', 'composer install', 'gulp build']
 
@@ -63,6 +64,8 @@ module.exports = async ({ pluginName: fileName }) => {
     ['./']
   )
 
+  const md5sum = await checkSumFile(tempFileName)
+  warn(`MD5 Sum of the tar file: ${md5sum}`)
   log(`Tar file created.`)
 
   return tempFileName

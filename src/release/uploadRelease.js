@@ -50,6 +50,7 @@ module.exports = async ({ tag, pluginName, tarFile }) => {
   const { size } = statSync(tarFile)
 
   try {
+    info('uploading release..')
     const result = await octokit.repos.uploadReleaseAsset({
       url,
       data: createReadStream(tarFile),
@@ -108,11 +109,6 @@ async function getReleaseUrl(token, { owner, repo, tag }) {
     octokit = new Octokit({
       auth: `token ${token}`
     })
-
-    debug(`Getting release upload url.
-      \tOwner: ${owner}.
-      \trepo: ${repo}.
-      \ttag: ${tag}`)
 
     const release = await octokit.repos.getReleaseByTag({ owner, repo, tag })
 

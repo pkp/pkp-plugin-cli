@@ -10,6 +10,7 @@
  * from version.xml.
  */
 const { readFile } = require('../utils/files')
+const { error } = require('../utils/log')
 
 const readVersionFile = async fileName => {
   try {
