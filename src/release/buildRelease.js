@@ -20,14 +20,24 @@ const checkSumFile = require('../utils/checkSumFile');
 
 const choices = ['No build step', 'composer install', 'gulp build']
 
-module.exports = async ({ pluginName: fileName }) => {
-  try {
-    info('Building the release')
-    debug('Running submodule update command')
-    const { stderr: submoduleUpdateError } = await execa('git', ['submodule', 'update', '--init', '--recursive'])
-    debug(submoduleUpdateError)
-    debug('Finished submodule update')
+module.exports = async ({ pluginName: fileName, repoUrl }) => {
+  info('Building the release')
+  debug('Clone the repo to start with a fresh copy')
+  const { stdout: cloneTempDir } = await execa('mktemp', ['-d'])
+  let { stdout: cloneResult } = await execa('git', ['clone', repoUrl, cloneTempDir])
+  debug('Cloned to temp dir:', cloneTempDir)
 
+  const originalDir = process.cwd()
+  debug(`current directory: ${process.cwd()}`)
+  shell.cd(cloneTempDir)
+  debug(`current directory: ${process.cwd()}`)
+
+  debug('Running submodule update command')
+  const { stderr: submoduleUpdateError } = await execa('git', ['submodule', 'update', '--init', '--recursive'])
+  debug(submoduleUpdateError)
+  debug('Finished submodule update')
+
+  try {
     if (fs.existsSync('./composer.json')) {
       info('Composer file detected. The tool will run "composer install".')
       const { stderr } = await execa('composer', ['install'])
@@ -47,26 +57,43 @@ module.exports = async ({ pluginName: fileName }) => {
   } catch (err) {
     error(err)
     // ToDo: make running build more sophisticated
-    log('An error happened while trying to run the build commands. It will be ignored, you can run any necessary build commands manually then rerun this tool.')
+    log('An error happened while trying to run the build commands (gulp or composer). It will be ignored, you can run any necessary build commands manually then rerun this tool.')
   }
 
-  log(`Creating tar file..`)
+  deleteExtraFiles(fileName)
 
-  const { stdout: tempFileName } = await execa('mktemp', `${fileName}XXXXXXXX`)
-  debug(`tempFileName for Tar output: ${tempFileName}`)
+  log(`Creating tar file..`)
+  const { stdout: tarTempFileName } = await execa('mktemp', `${fileName}XXXXXXXX`)
+  shell.cd(cloneTempDir)
 
   const result = await tar.c(
     {
       gzip: true,
-      file: tempFileName,
-      prefix: fileName
+      file: tarTempFileName,
+      prefix: fileName,
     },
     ['./']
   )
 
-  const md5sum = await checkSumFile(tempFileName)
+  debug(`Created tar file: ${tarTempFileName}`)
+
+  const md5sum = await checkSumFile(tarTempFileName)
   warn(`MD5 Sum of the tar file: ${md5sum}`)
   log(`Tar file created.`)
 
-  return tempFileName
+  shell.cd(originalDir)
+
+  return tarTempFileName
+}
+
+const deleteExtraFiles = (fileName) => {
+  shell.rm('-rf', '.git')
+  debug('Deleting files defined in exclusions.txt')
+  const exclusionsFile = shell.head('./exclusions.txt').toString()
+  const folderPrefix = new RegExp('^' + fileName + '/')
+  exclusionsFile.split('\n').forEach(file => {
+    if (!file) return
+    const fileToDelete = file.replace(folderPrefix, '')
+    shell.rm('-rf', fileToDelete)
+  })
 }

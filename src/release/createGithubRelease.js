@@ -66,7 +66,7 @@ async function checkReleaseCreated() {
       type: 'confirm',
       name: 'releaseCreated',
       message: `Once you publish the release on Github, type 'Yes' to proceed with the following steps.`,
-      default: false
+      default: true
     }
   ])
 

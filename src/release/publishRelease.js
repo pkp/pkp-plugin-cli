@@ -23,7 +23,7 @@ module.exports = async (newVersion, pluginName) => {
 
   const tag = await createTag({ pluginName, newVersion, repoUrl })
 
-  const tarFile = await buildRelease({ pluginName })
+  const tarFile = await buildRelease({ pluginName, repoUrl })
   await createGithubRelease({ repoUrl, tag })
   await uploadRelease({ tag, pluginName, tarFile })
 }
