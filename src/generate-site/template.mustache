@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>PKP Plugins List</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <h1>PKP Plugins</h1>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th width="200" scope="col">Plugin Name</th>
+                        <th scope="col">Compatibility</th>
+                        {{! <th scope="col">Localisation</th> }}
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#plugins}}
+                    <tr>
+                        <th scope="row">{{idx}}</th>
+                        <td>
+                            <a href="{{{url}}}">{{name}}</a>
+                        </td>
+                        <td>
+                            {{#releases}}
+                                Package: <a href="{{{url}}}">{{date}} {{version}}</a><br/>
+                                {{#compatibility}}
+                                    <small>{{.}}</small><br/>
+                                {{/compatibility}}<br/>
+                            {{/releases}}
+                        </td>
+                    </tr>
+                    {{/plugins}}
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
