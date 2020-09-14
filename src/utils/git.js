@@ -39,9 +39,14 @@ const pushTag = async () => {
   log(stdout)
 }
 
+const clone = async (repo, localFolder) => {
+  await execa('git', ['clone', repo, localFolder])
+}
+
 module.exports = {
   getRemoteUrl,
   getBranchName,
   commitVersionFile,
-  pushTag
+  pushTag,
+  clone
 }

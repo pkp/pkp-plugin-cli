@@ -19,6 +19,7 @@ const bump = require('./src/bump')
 const release = require('./src/release')
 
 const { error } = require('./src/utils/log')
+const generateSite = require('./src/generate-site')
 
 const start = async args => {
   try {
@@ -42,6 +43,8 @@ const start = async args => {
         return validateNewRelease(params)
       case 'validate-all-releases':
         return validateAllReleases(params)
+      case 'generate-site':
+        return generateSite(params)
       case 'version':
         return version(params)
       case 'help':
