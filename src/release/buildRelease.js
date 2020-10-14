@@ -54,6 +54,13 @@ module.exports = async ({ pluginName: fileName, repoUrl }) => {
       debug('No gulp file file found')
     }
 
+    if (fs.existsSync("./package.json")) {
+      info('Package.json file detected. The tool will run "npm install".')
+      const { stderr } = await execa("npm", ["install"])
+      error(stderr)
+    } else {
+      debug("No package.json file file found")
+    }
   } catch (err) {
     error(err)
     // ToDo: make running build more sophisticated
