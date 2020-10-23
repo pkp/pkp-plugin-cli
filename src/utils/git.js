@@ -20,6 +20,15 @@ const getRemoteUrl = async () => {
   return remote.match(/^http/) ? remote : githubUrlFromGit(remote)
 }
 
+const getBranchName = async () => {
+  const { stdout: branch } = await execa('git', [
+    'rev-parse',
+    '--abbrev-ref',
+    'HEAD'
+  ])
+  return branch
+}
+
 const commitVersionFile = async newVersion => {
   await execa('git', ['add', 'version.xml'])
   await execa('git', ['commit', '-m', `Update to version ${newVersion} `])
@@ -33,6 +42,7 @@ const pushTag = async () => {
 
 module.exports = {
   getRemoteUrl,
+  getBranchName,
   commitVersionFile,
   pushTag
 }

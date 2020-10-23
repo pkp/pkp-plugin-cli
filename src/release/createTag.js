@@ -17,7 +17,7 @@ const process = require('process')
 const { log, info, warn, error } = require('../utils/log')
 const git = require('../utils/git')
 
-const createTag = async ({ pluginName, newVersion, repoUrl }) => {
+const createTag = async ({ pluginName, newVersion, repoUrl, branch = 'master' }) => {
   info(
     `We will commit the change, tag the commit and push it to Github. Then we will create a release draft, and upload an asset to the release.`
   )
@@ -37,7 +37,7 @@ const createTag = async ({ pluginName, newVersion, repoUrl }) => {
     await execa('git', ['tag', '-a', '-m', tag, tag])
 
     info(`Pushing tag to remote - this may take a second or two... `)
-    await execa('git', ['push', '--follow-tags'])
+    await execa('git', ['push', '--set-upstream', 'origin', branch, '--follow-tags'])
 
     // await git.pushTag()
     info(`Tag ${tag} pushed to remote.`)

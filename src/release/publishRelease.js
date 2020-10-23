@@ -20,10 +20,11 @@ const uploadRelease = require('./uploadRelease')
 
 module.exports = async (newVersion, pluginName) => {
   const repoUrl = await git.getRemoteUrl()
+  const branch = await git.getBranchName()
 
-  const tag = await createTag({ pluginName, newVersion, repoUrl })
+  const tag = await createTag({ pluginName, newVersion, repoUrl, branch })
 
-  const tarFile = await buildRelease({ pluginName, repoUrl })
+  const tarFile = await buildRelease({ pluginName, repoUrl, branch })
   await createGithubRelease({ repoUrl, tag })
   await uploadRelease({ tag, pluginName, tarFile })
 }
