@@ -19,10 +19,10 @@ module.exports = args => {
     'Extracts all releases for all plugins from a plugins.xml file and validates their MD5 checksum (used internally by the CI tool)'
   )
   log('')
-  warn('generate-site --input file/input.xml'),
-    log(
-      'Generates a website reflecting the state of plugins directory (used internally by the CI tool)'
-    )
+  warn('generate-site --input file/input.xml')
+  log(
+    'Generates a website reflecting the state of plugins directory (used internally by the CI tool)'
+  )
   log('')
   warn('validate-new-release')
   log('Validates the new releases added to a plugin.xml file. This command needs to run within a Git checkout of the plugin gallery XML repository (used internally by the CI tool)')

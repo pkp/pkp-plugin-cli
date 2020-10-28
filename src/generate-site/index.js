@@ -10,17 +10,15 @@
  * the state of plugins
  */
 const shell = require('shelljs')
-// const validateXml = require('../utils/plugins/validateXml')
-const extractAllPlugins = require('../utils/plugins/extractAllPlugins')
+const path = require('path')
+const extractAllPlugins = require('./extractAllPlugins')
 const { readFile, writeFile } = require('../utils/files')
-const { info, error, debug } = require('../utils/log')
+const { info, error } = require('../utils/log')
 const execa = require('execa')
-const Mustache = require('mustache');
-const { Octokit } = require('@octokit/rest');
-const git = require('../utils/git');
-const username = require('git-username');
-
-let octokit
+const Mustache = require('mustache')
+const git = require('../utils/git')
+const username = require('git-username')
+const { listBranches } = require('./ojs')
 
 module.exports = async args => {
   try {
@@ -29,19 +27,30 @@ module.exports = async args => {
 
     const { GITHUB_TOKEN: githubToken } = process.env
 
-    // await validateXml(inputFilePath)
-    const plugins = await extractAllPlugins(inputFilePath)
-    info(JSON.stringify(plugins, null, 2))
+    const branches = await listBranches()
+    info(`${branches.length} stable branches found`)
 
-    const template = await readFile(`${__dirname}/template.mustache`)
+    // await validateXml(inputFilePath)
+    const releaseVersions = branches.map(b => {
+      const matchVersion = b.name.match(/([0-9_])+$/)
+
+      const result = (matchVersion && matchVersion[0]) || ''
+      return result.replace(/_/g, '.')
+    }).reverse()
+
+    const plugins = await extractAllPlugins(inputFilePath, releaseVersions)
+    // info(JSON.stringify(plugins, null, 2))
+
+    const template = await readFile(path.join(__dirname, 'template.mustache'))
 
     let idx = 1
     const rendered = Mustache.render(template, {
       plugins,
-      "idx": function () {
-        return idx++;
+      releaseVersions,
+      idx: function () {
+        return idx++
       }
-    });
+    })
 
     const { stdout: tmpFolder } = await execa('mktemp', ['-d'])
     const destinationFolder = `${tmpFolder}/pkp-plugins`
@@ -60,7 +69,6 @@ module.exports = async args => {
     const gitUrlWithToken = gitUrl.replace(/https:\/\//, `https://${username()}:${githubToken}@`)
     await execa('git', ['remote', 'set-url', 'origin', gitUrlWithToken])
     await execa('git', ['push', 'origin', 'master'])
-
   } catch (err) {
     error(err)
     shell.exit(1)
@@ -74,7 +82,7 @@ const getFilePathFromArgs = args => {
   }
 
   if (!input) {
-    throw `No path provided. Run "pkp-plugin help" for information on the command.`
+    throw new Error('No path provided. Run "pkp-plugin help" for information on the command.')
   }
 
   return input

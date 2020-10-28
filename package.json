@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"no test specified yet\" ",
-    "lint": "eslint ."
+    "lint": "eslint . --ext .js"
   },
   "repository": {
     "type": "git",
