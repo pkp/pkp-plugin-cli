@@ -12,6 +12,7 @@
  * - Validates their MD5 checksum
  */
 const shell = require('shelljs')
+const path = require('path')
 const validateXml = require('../utils/plugins/validateXml')
 const extractReleases = require('../utils/plugins/extractAllReleasesFromXml')
 const { writeFile } = require('../utils/files')
@@ -40,14 +41,14 @@ module.exports = async args => {
     // use batch script to validate the MD5 checksum for all releases
     // (this was a lot faster than doing the download in Node)
     info(`Validating MD5 sum for all ${releases.length} releases`)
-    const command = `bash ${__dirname}/check-md5.sh < ${extractedDataFile}`
+    const command = `bash ${path.join(__dirname, 'check-md5.sh')} < ${extractedDataFile}`
     const code = shell.exec(command).code
 
     // Delete intermediate file
     shell.rm(extractedDataFile)
 
     if (code !== 0) {
-      throw 'Error: Bash script performing md5 validation returned an error'
+      throw new Error('Error: Bash script performing md5 validation returned an error')
     }
   } catch (err) {
     error(err)
@@ -62,7 +63,7 @@ const getFilePathFromArgs = args => {
   }
 
   if (!input) {
-    throw `No path provided. Run "pkp-plugin help" for information on the command.`
+    throw new Error('No path provided. Run "pkp-plugin help" for information on the command.')
   }
 
   return input

@@ -14,10 +14,9 @@ const inquirer = require('inquirer')
 const { Octokit } = require('@octokit/rest')
 const chalk = require('chalk')
 const { createReadStream, statSync } = require('fs')
-const { basename } = require('path')
 const process = require('process')
 const hostedGitInfo = require('hosted-git-info')
-const { log, error, info, success, warn, debug } = require('../utils/log')
+const { error, info, success, warn, debug } = require('../utils/log')
 const { getRemoteUrl } = require('../utils/git')
 
 let octokit
@@ -42,8 +41,7 @@ module.exports = async ({ tag, pluginName, tarFile }) => {
       error(err)
       url = await promptForGithubToken({ owner, repo, tag })
     }
-  }
-  else {
+  } else {
     url = await promptForGithubToken({ owner, repo, tag })
   }
 
@@ -70,20 +68,21 @@ module.exports = async ({ tag, pluginName, tarFile }) => {
     } else error(JSON.stringify(result))
   } catch (err) {
     if (err.status === 422) {
-      error(`The file you tried to upload to the release already exists.`)
+      error('The file you tried to upload to the release already exists.')
     }
     error(err)
     process.exit(1)
   }
 }
 
-async function promptForGithubToken({ owner, repo, tag }) {
+async function promptForGithubToken ({ owner, repo, tag }) {
   let url
 
-  const message = process.env.GITHUB_TOKEN ? 'Enter your Github personal token (or Enter to use the one already provided)'
+  const message = process.env.GITHUB_TOKEN
+    ? 'Enter your Github personal token (or Enter to use the one already provided)'
     : 'Enter your Github personal token'
 
-  const { token } = await inquirer.prompt([
+  await inquirer.prompt([
     {
       type: 'password',
       name: 'token',
@@ -104,7 +103,7 @@ async function promptForGithubToken({ owner, repo, tag }) {
   return url
 }
 
-async function getReleaseUrl(token, { owner, repo, tag }) {
+async function getReleaseUrl (token, { owner, repo, tag }) {
   try {
     octokit = new Octokit({
       auth: `token ${token}`

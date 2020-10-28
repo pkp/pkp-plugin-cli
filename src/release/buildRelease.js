@@ -11,29 +11,25 @@
  * - creates a Tar file from the current folder (in preparation to uploading it as an asset to the Github release)
  */
 const { error, log, warn, info, debug } = require('../utils/log')
-const inquirer = require('inquirer')
 const execa = require('execa')
 const tar = require('tar')
-const fs = require("fs");
-const shell = require('shelljs');
-const checkSumFile = require('../utils/checkSumFile');
-const git = require('../utils/git');
-
-const choices = ['No build step', 'composer install', 'gulp build']
+const fs = require('fs')
+const shell = require('shelljs')
+const checkSumFile = require('../utils/checkSumFile')
+const git = require('../utils/git')
 
 module.exports = async ({ pluginName: fileName, repoUrl, branch = 'master' }) => {
   info('Building the release')
   debug('Clone the repo to start with a fresh copy')
   const { stdout: cloneTempDir } = await execa('mktemp', ['-d'])
-  let { stdout: cloneResult } = await execa('git', ['clone', repoUrl, cloneTempDir])
+  await execa('git', ['clone', repoUrl, cloneTempDir])
   debug('Cloned to temp dir:', cloneTempDir)
 
-  
   const originalDir = process.cwd()
   debug(`current directory: ${process.cwd()}`)
   shell.cd(cloneTempDir)
   debug(`current directory: ${process.cwd()}`)
-  
+
   await execa('git', ['fetch'])
   await execa('git', ['checkout', branch])
   debug(`current branch: ${(await git.getBranchName())}`)
@@ -60,12 +56,12 @@ module.exports = async ({ pluginName: fileName, repoUrl, branch = 'master' }) =>
       debug('No gulp file file found')
     }
 
-    if (fs.existsSync("./package.json")) {
+    if (fs.existsSync('./package.json')) {
       info('Package.json file detected. The tool will run "npm install".')
-      const { stderr } = await execa("npm", ["install"])
+      const { stderr } = await execa('npm', ['install'])
       error(stderr)
     } else {
-      debug("No package.json file file found")
+      debug('No package.json file file found')
     }
   } catch (err) {
     error(err)
@@ -75,15 +71,15 @@ module.exports = async ({ pluginName: fileName, repoUrl, branch = 'master' }) =>
 
   deleteExtraFiles(fileName)
 
-  log(`Creating tar file..`)
+  log('Creating tar file..')
   const { stdout: tarTempFileName } = await execa('mktemp', `${fileName}XXXXXXXX`)
   shell.cd(cloneTempDir)
 
-  const result = await tar.c(
+  await tar.c(
     {
       gzip: true,
       file: tarTempFileName,
-      prefix: fileName,
+      prefix: fileName
     },
     ['./']
   )
@@ -92,7 +88,7 @@ module.exports = async ({ pluginName: fileName, repoUrl, branch = 'master' }) =>
 
   const md5sum = await checkSumFile(tarTempFileName)
   warn(`MD5 Sum of the tar file: ${md5sum}`)
-  log(`Tar file created.`)
+  log('Tar file created.')
 
   shell.cd(originalDir)
 

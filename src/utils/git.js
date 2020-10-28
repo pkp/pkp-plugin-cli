@@ -37,7 +37,6 @@ const commitVersionFile = async newVersion => {
 const pushTag = async () => {
   const { stdout } = await execa('git', ['push', 'origin', '--tags'])
   log(stdout)
-  return
 }
 
 module.exports = {

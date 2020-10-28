@@ -14,7 +14,7 @@ const xml2js = require('xml2js')
 const inquirer = require('inquirer')
 const chalk = require('chalk')
 const process = require('process')
-const { warn, error, info } = require('../utils/log')
+const { error, info } = require('../utils/log')
 const { writeFile } = require('../utils/files')
 const getNextVersion = require('../utils/getNextVersion')
 const publishRelease = require('../release/publishRelease')
@@ -46,26 +46,22 @@ module.exports = async args => {
       {
         type: 'input',
         name: 'release',
-        message: `What is the version of the release you want to publish?`,
+        message: 'What is the version of the release you want to publish?',
         default: getNextVersion(release),
         validate: value => {
           if (!value) return 'Version number should be provided'
-          if (!value.match(/^(\d+\.)?(\d+\.)?(\d+\.)?(\*|\d+)$/))
-            return 'Version format incorrect'
-          if (value === release)
-            return 'New Version should be different from current version'
-          else return true
+          if (!value.match(/^(\d+\.)?(\d+\.)?(\d+\.)?(\*|\d+)$/)) { return 'Version format incorrect' }
+          if (value === release) { return 'New Version should be different from current version' } else return true
         }
       },
       {
         type: 'input',
         name: 'date',
-        message: `What is the release date?`,
+        message: 'What is the release date?',
         default: suggestedDate,
         validate: value => {
           if (!value) return 'Release date should be provided'
-          if (!value.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/))
-            return 'Version format incorrect'
+          if (!value.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/)) { return 'Version format incorrect' }
           return true
         }
       }
@@ -81,13 +77,13 @@ module.exports = async args => {
       `<date>${answers.date}</date>`
     )
 
-    await writeFile(`./version.xml`, result)
-    info(`Updated contents of version.xml`)
+    await writeFile('./version.xml', result)
+    info('Updated contents of version.xml')
 
     publishRelease(answers.release, pluginName)
   } catch (err) {
     if (err.isTtyError) {
-      error(`Prompt couldn't be rendered in the current environment`)
+      error('Prompt couldn\'t be rendered in the current environment')
     } else {
       error(err)
     }

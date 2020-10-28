@@ -15,6 +15,7 @@
  * - Checks the contents of the tar file of the package are valid
  */
 const shell = require('shelljs')
+const path = require('path')
 const downloadPackage = require('../utils/downloadPackage')
 const extractReleaseDataFromDiff = require('./extractReleaseDataFromDiff')
 const checksumFile = require('../utils/checkSumFile')
@@ -26,9 +27,8 @@ const { error, success, info } = require('../utils/log')
  */
 module.exports = async () => {
   try {
-    info(`Checking new release`)
-    const diffFile = __dirname + '/diff.temp'
-    const command = shell.exec(`git diff origin/master | grep ^+[^+]`)
+    info('Checking new release')
+    const command = shell.exec('git diff origin/master | grep ^+[^+]')
     const changedLines = command.stdout
 
     // Extract release, md5 data from diff
@@ -46,14 +46,14 @@ module.exports = async () => {
     info(`Package url: ${packageUrl}. Expected MD5: ${expectedMD5}`)
 
     // Download package
-    const downloadedFileName = __dirname + '/downloaded_package.tar.gz'
+    const downloadedFileName = path.join(__dirname, '/downloaded_package.tar.gz')
     await downloadPackage(packageUrl, downloadedFileName)
 
     // Calculate MD5 of downloaded file
     const md5 = await checksumFile(downloadedFileName)
 
     if (md5 === expectedMD5) {
-      success(`The MD5 of the downloaded file is correct`)
+      success('The MD5 of the downloaded file is correct')
     } else {
       error(
         `The MD5 of the downloaded is incorrect. Expected ${expectedMD5}, Actual ${md5}`

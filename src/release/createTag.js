@@ -14,29 +14,29 @@
 const inquirer = require('inquirer')
 const execa = require('execa')
 const process = require('process')
-const { log, info, warn, error } = require('../utils/log')
+const { info, error } = require('../utils/log')
 const git = require('../utils/git')
 
 const createTag = async ({ pluginName, newVersion, repoUrl, branch = 'master' }) => {
   info(
-    `We will commit the change, tag the commit and push it to Github. Then we will create a release draft, and upload an asset to the release.`
+    'We will commit the change, tag the commit and push it to Github. Then we will create a release draft, and upload an asset to the release.'
   )
   const { tag } = await inquirer.prompt([
     {
       type: 'input',
       name: 'tag',
-      message: `What tag do you want to apply to this commit?`,
+      message: 'What tag do you want to apply to this commit?',
       default: getPossibleTag(pluginName, newVersion)
     }
   ])
 
   try {
-    info(`Committing version.xml... `)
+    info('Committing version.xml... ')
     await git.commitVersionFile(newVersion)
-    info(`Creating an annotated tag... `)
+    info('Creating an annotated tag... ')
     await execa('git', ['tag', '-a', '-m', tag, tag])
 
-    info(`Pushing tag to remote - this may take a second or two... `)
+    info('Pushing tag to remote - this may take a second or two... ')
     await execa('git', ['push', '--set-upstream', 'origin', branch, '--follow-tags'])
 
     // await git.pushTag()

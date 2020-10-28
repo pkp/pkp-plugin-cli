@@ -12,14 +12,14 @@
  * (its url and MD5 namely)
  */
 const extractReleaseData = lines => {
-  const { groups: { package } = {} } =
+  const { groups: { package: releasePackage } = {} } =
     /<package>(?<package>[^ $]*)<\/package>/g.exec(lines) || {}
 
-  const { groups: { md5 } = {} } = /md5=\"(?<md5>[^ $]*)\"/g.exec(lines) || {}
+  const { groups: { md5 } = {} } = /md5="(?<md5>[^ $]*)"/g.exec(lines) || {}
 
   return {
     md5,
-    package
+    package: releasePackage
   }
 }
 

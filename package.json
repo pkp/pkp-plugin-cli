@@ -4,7 +4,8 @@
   "description": "PKP Plugins Registry CLI",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"no test specified yet\" "
+    "test": "echo \"no test specified yet\" ",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -30,5 +31,13 @@
   "bin": {
     "pkp-plugin": "./bin/index.js"
   },
-  "preferGlobal": true
+  "preferGlobal": true,
+  "devDependencies": {
+    "eslint": "^7.12.1",
+    "eslint-config-standard": "^15.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.2"
+  }
 }

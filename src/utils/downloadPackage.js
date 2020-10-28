@@ -14,10 +14,10 @@
 const https = require('follow-redirects').https
 const fs = require('fs')
 
-module.exports = (package, fileName) => {
+module.exports = (packageToDownload, fileName) => {
   return new Promise((resolve, reject) => {
     const file = fs.createWriteStream(fileName)
-    const req = https.get(package, function (response) {
+    const req = https.get(packageToDownload, function (response) {
       response.pipe(file)
       response.on('end', resolve)
     })

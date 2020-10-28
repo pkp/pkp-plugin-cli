@@ -34,13 +34,13 @@ const extractData = async filePath => {
   result.plugins.plugin.forEach(plugin => {
     if (!plugin.name) {
       error(`${JSON.stringify(plugin)}\n`)
-      throw 'The last plugin does not have have a name attribute'
+      throw new Error('The last plugin does not have have a name attribute')
     }
 
     debug(`${plugin.name[0]._}: ${plugin.release.length} releases found`)
     plugin.release.forEach(release => {
       if (release.package.length > 1) {
-        throw 'Each release should have one package'
+        throw new Error('Each release should have one package')
       }
       const expectedMd5Sum = release.$.md5
       const version = release.$.version

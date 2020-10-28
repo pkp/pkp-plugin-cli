@@ -10,8 +10,8 @@
  * - Prompts the user to confirm they want to create a release on Github
  * - Opens the URL for Github release prepopulated with the release info
  * - Waits for the user to confirm they have published the release
- * 
- * @notes 
+ *
+ * @notes
  * - We can not automatically know when the user has published the release so we require manual confirmation
  *  - using open({wait: true}) could be used but it triggers when the browser is closed (not the tab),
  *  also it does not work on windows
@@ -23,11 +23,11 @@ const newGithubReleaseUrl = require('new-github-release-url')
 const { info } = require('../utils/log')
 
 module.exports = async ({ repoUrl, tag }) => {
-  const { createRelease } = await inquirer.prompt([
+  await inquirer.prompt([
     {
       type: 'confirm',
       name: 'createRelease',
-      message: `Would you like to create a release on Github?`,
+      message: 'Would you like to create a release on Github?',
       default: true
     }
   ])
@@ -41,7 +41,7 @@ module.exports = async ({ repoUrl, tag }) => {
   const { stdout: body } = await execa('git', [
     'log',
     `${lastTag}..HEAD`,
-    `--oneline`
+    '--oneline'
   ])
 
   const url = newGithubReleaseUrl({
@@ -50,22 +50,22 @@ module.exports = async ({ repoUrl, tag }) => {
     body
   })
 
-  info(`We will open Github on a browser for you to create the release.`)
+  info('We will open Github on a browser for you to create the release.')
 
   await open(url)
 
   while (true) {
     const created = await checkReleaseCreated()
-    if (created) break;
+    if (created) break
   }
 }
 
-async function checkReleaseCreated() {
+async function checkReleaseCreated () {
   const { releaseCreated } = await inquirer.prompt([
     {
       type: 'confirm',
       name: 'releaseCreated',
-      message: `Once you publish the release on Github, type 'Yes' to proceed with the following steps.`,
+      message: 'Once you publish the release on Github, type \'Yes\' to proceed with the following steps.',
       default: true
     }
   ])

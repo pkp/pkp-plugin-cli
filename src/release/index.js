@@ -7,9 +7,9 @@
  * @brief Entry point for release command
  *
  * This entry point only parses arguments. Orchestrating the work is handled by publishRelease module.
- * 
+ *
  */
-const { warn, info } = require('../utils/log')
+const { info } = require('../utils/log')
 const publishRelease = require('./publishRelease')
 
 module.exports = args => {
