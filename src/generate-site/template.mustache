@@ -6,34 +6,43 @@
     <body>
         <div class="container">
             <h1>PKP Plugins</h1>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th width="200" scope="col">Plugin Name</th>
-                        <th scope="col">Compatibility</th>
-                        {{! <th scope="col">Localisation</th> }}
-                    </tr>
-                </thead>
-                <tbody>
-                    {{#plugins}}
-                    <tr>
-                        <th scope="row">{{idx}}</th>
-                        <td>
-                            <a href="{{{url}}}">{{name}}</a>
-                        </td>
-                        <td>
-                            {{#releases}}
-                                Package: <a href="{{{url}}}">{{date}} {{version}}</a><br/>
-                                {{#compatibility}}
-                                    <small>{{.}}</small><br/>
-                                {{/compatibility}}<br/>
-                            {{/releases}}
-                        </td>
-                    </tr>
-                    {{/plugins}}
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th  style="max-width: 150px" scope="col">Plugin Name</th>
+                            {{#releaseVersions}}
+                                <th class="text-center" scope="col">{{.}}</th>
+                            {{/releaseVersions}}
+                            {{! <th scope="col">Localisation</th> }}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#plugins}}
+                        <tr>
+                            <th scope="row">{{idx}}</th>
+                            <td style="max-width: 150px;overflow: scroll;text-overflow: ellipsis;">
+                                <a href="{{{url}}}">{{name}}</a>
+                            </td>
+                            {{#branchesWithPackages}}
+                                {{^.}}
+                                    <td class="text-secondary text-center">-</td>
+                                {{/.}}
+                                {{#.}}
+                                    <td class="text-center">
+                                        <small>Package: <a href="{{{url}}}">{{date}} {{version}}</a>
+                                        </small>
+                                        <br/>
+                                    </td>
+                                {{/.}}
+                                
+                            {{/branchesWithPackages}}
+                        </tr>
+                        {{/plugins}}
+                    </tbody>
+                </table>
+            </div>
         </div>
     </body>
 </html>
