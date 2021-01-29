@@ -2,6 +2,11 @@
     <head>
         <title>PKP Plugins List</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+        .tiny {
+          font-size: 10px
+        }
+        </style>
     </head>
     <body>
         <div class="container">
@@ -13,7 +18,7 @@
                             <th scope="col">#</th>
                             <th  style="max-width: 150px" scope="col">Plugin Name</th>
                             {{#releaseVersions}}
-                                <th class="text-center" scope="col">{{.}}</th>
+                                <th class="text-center" scope="col">{{version}}</th>
                             {{/releaseVersions}}
                             {{! <th scope="col">Localisation</th> }}
                         </tr>
@@ -25,19 +30,27 @@
                             <td style="max-width: 150px;overflow: scroll;text-overflow: ellipsis;">
                                 <a href="{{{url}}}">{{name}}</a>
                             </td>
-                            {{#branchesWithPackages}}
+                            {{#compatibilityMatrix}}
                                 {{^.}}
                                     <td class="text-secondary text-center">-</td>
                                 {{/.}}
                                 {{#.}}
                                     <td class="text-center">
-                                        <small>Package: <a href="{{{url}}}">{{date}} {{version}}</a>
+                                        <small>Package: <a href="{{{url}}}">{{date}} {{pluginVersion}}</a>
                                         </small>
-                                        <br/>
+                                        <br/><br/>
+                                        {{#hasBranch}}
+                                          <small class="tiny text-success">
+                                            <a target="_blank" href="{{{.}}}">Remote branch</a>
+                                          </small>
+                                        {{/hasBranch}}
+                                        {{^hasBranch}}
+                                          <small class="tiny text-muted">No matching branch</small>
+                                        {{/hasBranch}}
                                     </td>
                                 {{/.}}
                                 
-                            {{/branchesWithPackages}}
+                            {{/compatibilityMatrix}}
                         </tr>
                         {{/plugins}}
                     </tbody>

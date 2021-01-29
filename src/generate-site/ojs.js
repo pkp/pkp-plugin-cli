@@ -1,10 +1,19 @@
+/**
+ * @file src/generate-site/ojs.js
+ *
+ * Copyright (c) 2021 Simon Fraser University
+ * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ *
+ * @brief helper function to get the stable branches of OJS
+ *
+ * These will correspond to the columns in the final generated HTML report
+ */
+
 const { Octokit } = require('@octokit/rest')
 let octokit
 
-// const ojsRepo = 'https://github.com/pkp/ojs.git'
-
 const listBranches = async () => {
-  const token = process.env.GITHUB_TOKEN || '6d76bcf570aff15db57354d17a3c93ff8c41fce2'
+  const token = process.env.GITHUB_TOKEN
   octokit = new Octokit({
     auth: `token ${token}`
   })

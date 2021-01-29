@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<plugins xmlns="http://pkp.sfu.ca" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pkp.sfu.ca plugins.xsd">
+	<plugin category="generic" product="hypothesis">
+		<name locale="en_US">Hypothes.is</name>
+		<homepage>https://github.com/kabaros/hypothesis</homepage>
+		<summary locale="en_US">This plugin integrates the Hypothes.is annotation tool into articles.</summary>
+		<description locale="en_US"><![CDATA[This plugin integrates Hypothes.is (<a href="http://hypothes.is" target="_blank">http://hypothes.is</a>) in OJS articles, permitting annotation and commenting.]]></description>
+		<maintainer>
+			<name>Mozafar</name>
+			<institution>Public Knowledge Project</institution>
+			<email>pkp.contact@gmail.com</email>
+		</maintainer>
+		<release date="2017-02-20" version="1.0.0.0" md5="09c6cff1b9bd544e41cd22a3ebe41088">
+			<package>https://github.com/kabaros/hypothesis/releases/download/ojs-3_0_2-0/hypothesis-ojs-3_0_2-0.tar.gz</package>
+			<compatibility application="ojs2">
+				<version>3.0.2.0</version>
+			</compatibility>
+			<certification type="official" />
+			<description>Release of the Hypothes.is plugin for OJS 3.0.2.</description>
+		</release>
+		<release date="2017-10-23" version="1.0.0.0" md5="c812e14336807a5704af34c39b9b5518">
+			<package>https://github.com/kabaros/hypothesis/releases/download/ojs-3_1_0-0/hypothesis-ojs-3_1_0-0.tar.gz</package>
+			<compatibility application="ojs2">
+				<version>3.1.0.0</version>
+				<version>3.1.0.1</version>
+			</compatibility>
+			<certification type="official" />
+			<description>Release of the Hypothes.is plugin for OJS 3.1.0.</description>
+		</release>
+		<release date="2018-04-04" version="1.0.1.0" md5="31171a9a889104e41fac5136ec41050b">
+			<package>https://github.com/kabaros/hypothesis/releases/download/ojs-3_1_1-0/hypothesis-ojs-3_1_1-0.tar.gz</package>
+			<compatibility application="ojs2">
+				<version>3.1.1.0</version>
+				<version>3.1.1.1</version>
+				<version>3.1.1.2</version>
+				<version>3.1.1.4</version>
+				<version>3.1.2.0</version>
+				<version>3.1.2.1</version>
+				<version>3.1.2.2</version>
+				<version>3.1.2.3</version>
+				<version>3.1.2.4</version>
+			</compatibility>
+			<certification type="official" />
+			<description>Release of the Hypothes.is plugin for OJS 3.1.1/3.1.2.</description>
+		</release>
+		<release date="2020-02-27" version="1.0.2.0" md5="5bf045d0490284044125d398e2cea41b">
+			<package>https://github.com/kabaros/hypothesis/releases/download/v1.0.2-0/hypothesis-v1.0.2-0.tar.gz</package>
+			<compatibility application="ojs2">
+				<version>3.2.0.0</version>
+				<version>3.2.0.1</version>
+				<version>3.2.0.2</version>
+				<version>3.2.0.3</version>
+			</compatibility>
+			<compatibility application="ops">
+				<version>3.2.0.0</version>
+				<version>3.2.0.1</version>
+				<version>3.2.0.2</version>
+				<version>3.2.0.3</version>
+			</compatibility>
+			<certification type="official" />
+			<description>Release of the Hypothes.is plugin for OJS/OPS 3.2.</description>
+		</release>
+		<release date="2020-06-09" version="1.0.3.1" md5="22d0f8cd87a6d0dc7c0e989178b11d0e">
+			<package>https://github.com/kabaros/hypothesis/releases/download/v1.0.3-1/hypothesis-v1.0.3-1.tar.gz</package>
+			<compatibility application="ojs2">
+				<version>3.2.0.0</version>
+				<version>3.2.0.1</version>
+				<version>3.2.0.2</version>
+				<version>3.2.0.3</version>
+				<version>3.2.1.0</version>
+				<version>3.2.1.1</version>
+			</compatibility>
+			<compatibility application="ops">
+				<version>3.2.0.0</version>
+				<version>3.2.0.1</version>
+				<version>3.2.0.2</version>
+				<version>3.2.0.3</version>
+				<version>3.2.1.0</version>
+				<version>3.2.1.1</version>
+			</compatibility>
+			<certification type="official" />
+			<description>Release of the Hypothes.is plugin for OJS/OPS 3.2.</description>
+		</release>
+		<release date="2020-06-19" version="1.0.3.2" md5="1ade03ccaa1afca522928a93641e8bef">
+			<package>https://github.com/kabaros/hypothesis/releases/download/v1.0.3-2/hypothesis-v1.0.3-2.tar.gz</package>
+			<compatibility application="ojs2">
+				<version>3.2.0.0</version>
+				<version>3.2.0.1</version>
+				<version>3.2.0.2</version>
+				<version>3.2.0.3</version>
+				<version>3.2.1.0</version>
+				<version>3.2.1.1</version>
+			</compatibility>
+			<compatibility application="ops">
+				<version>3.2.0.0</version>
+				<version>3.2.0.1</version>
+				<version>3.2.0.2</version>
+				<version>3.2.0.3</version>
+				<version>3.2.1.0</version>
+				<version>3.2.1.1</version>
+			</compatibility>
+			<certification type="official" />
+			<description>Release of the Hypothes.is plugin for OJS/OPS 3.2.</description>
+		</release>
+	</plugin>
+</plugins>
