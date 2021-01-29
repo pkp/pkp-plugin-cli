@@ -10,6 +10,12 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 12
   },
+  globals: {
+    describe: 'readonly',
+    test: 'readonly',
+    expect: 'readonly',
+    jest: 'readonly'
+  },
   rules: {
   }
 }

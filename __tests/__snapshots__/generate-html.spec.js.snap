@@ -1,0 +1,2840 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generateHTML generates the final HTML table 1`] = `
+"<html>
+    <head>
+        <title>PKP Plugins List</title>
+        <link rel=\\"stylesheet\\" href=\\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\\" integrity=\\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\\" crossorigin=\\"anonymous\\">
+        <style>
+        .tiny {
+          font-size: 10px
+        }
+        </style>
+    </head>
+    <body>
+        <div class=\\"container\\">
+            <h1>PKP Plugins</h1>
+            <div class=\\"table-responsive\\">
+                <table class=\\"table table-striped\\">
+                    <thead>
+                        <tr>
+                            <th scope=\\"col\\">#</th>
+                            <th  style=\\"max-width: 150px\\" scope=\\"col\\">Plugin Name</th>
+                                <th class=\\"text-center\\" scope=\\"col\\">3.2.1</th>
+                                <th class=\\"text-center\\" scope=\\"col\\">3.2.0</th>
+                                <th class=\\"text-center\\" scope=\\"col\\">3.1.2</th>
+                                <th class=\\"text-center\\" scope=\\"col\\">3.1.1</th>
+                                <th class=\\"text-center\\" scope=\\"col\\">3.1.0</th>
+                                <th class=\\"text-center\\" scope=\\"col\\">3.0.2</th>
+                                <th class=\\"text-center\\" scope=\\"col\\">3.0.1</th>
+                                <th class=\\"text-center\\" scope=\\"col\\">3.0.0</th>
+                                <th class=\\"text-center\\" scope=\\"col\\">2.4.8</th>
+                                <th class=\\"text-center\\" scope=\\"col\\">2.4.7</th>
+                                <th class=\\"text-center\\" scope=\\"col\\">2.4.6</th>
+                                <th class=\\"text-center\\" scope=\\"col\\">2.4.5</th>
+                                <th class=\\"text-center\\" scope=\\"col\\">2.3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope=\\"row\\">1</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/asmecher/hypothesis\\">asmecher &#x2F; hypothesis</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/hypothesis/releases/download/v1.0.3-2/hypothesis-v1.0.3-2.tar.gz\\">2020-06-19 1.0.3.2</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/hypothesis/releases/download/v1.0.3-2/hypothesis-v1.0.3-2.tar.gz\\">2020-06-19 1.0.3.2</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/hypothesis/releases/download/ojs-3_1_1-0/hypothesis-ojs-3_1_1-0.tar.gz\\">2018-04-04 1.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/asmecher/hypothesis/tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/hypothesis/releases/download/ojs-3_1_1-0/hypothesis-ojs-3_1_1-0.tar.gz\\">2018-04-04 1.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/hypothesis/releases/download/ojs-3_1_0-0/hypothesis-ojs-3_1_0-0.tar.gz\\">2017-10-23 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/hypothesis/releases/download/ojs-3_0_2-0/hypothesis-ojs-3_0_2-0.tar.gz\\">2017-02-20 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/hypothesis/releases/download/ojs-3_1_1-0/hypothesis-ojs-3_1_1-0.tar.gz\\">2018-04-04 1.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">2</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/pkp/shibboleth\\">pkp &#x2F; shibboleth</a>
+                            </td>
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/shibboleth/releases/download/3_1_2-0/shibboleth-3_1_2-0.tar.gz\\">2019-02-28 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/shibboleth/tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/shibboleth/releases/download/ojs-3_1_0-0-1/shibboleth-ojs-3_1_0-0-1.tar.gz\\">2017-11-06 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/shibboleth/releases/download/ojs-3_1_0-0-1/shibboleth-ojs-3_1_0-0-1.tar.gz\\">2017-11-06 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/shibboleth/releases/download/3_1_2-0/shibboleth-3_1_2-0.tar.gz\\">2019-02-28 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">3</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/pkp/translator\\">pkp &#x2F; translator</a>
+                            </td>
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/translator/releases/download/v2.0.3-1/translator-v2.0.3-1.tar.gz\\">2019-03-04 2.0.3.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/translator/tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/translator/releases/download/v2.0.3-0/translator-v2.0.3-0.tar.gz\\">2018-09-25 2.0.3.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/translator/tree/ojs-stable-3_1_1\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/translator/releases/download/v2.0.3-0/translator-v2.0.3-0.tar.gz\\">2018-09-25 2.0.3.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/translator/tree/ojs-stable-3_1_0\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/translator/releases/download/v2.0.3-1/translator-v2.0.3-1.tar.gz\\">2019-03-04 2.0.3.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">4</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/asmecher/backup\\">asmecher &#x2F; backup</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/backup/releases/download/v2.0.2-2/backup-v2.0.2-2.tar.gz\\">2020-04-08 2.0.2.2</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/backup/releases/download/v2.0.2-1/backup-v2.0.2-1.tar.gz\\">2020-04-08 2.0.2.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/backup/releases/download/v2.0.1-0/backup-v2.0.1-0.tar.gz\\">2019-03-04 2.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/backup/releases/download/v2_0_0-0/backup-v2_0_0-0.tar.gz\\">2018-07-03 2.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/backup/releases/download/v2_0_0-0/backup-v2_0_0-0.tar.gz\\">2018-07-03 2.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/backup/releases/download/v2.0.1-0/backup-v2.0.1-0.tar.gz\\">2019-03-04 2.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">5</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/asmecher/plagiarism\\">asmecher &#x2F; plagiarism</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/plagiarism/releases/download/v1.0.3-0/plagiarism-v1.0.3-0.tar.gz\\">2019-03-04 1.0.3.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/plagiarism/releases/download/v1.0.3-0/plagiarism-v1.0.3-0.tar.gz\\">2019-03-04 1.0.3.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/plagiarism/releases/download/v1.0.2/plagiarism-v1.0.2.tar.gz\\">2019-03-04 1.0.2.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/asmecher/plagiarism/tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/plagiarism/releases/download/v1.0.1/plagiarism-v1.0.1.tar.gz\\">2018-06-21 1.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/asmecher/plagiarism/tree/ojs-stable-3_1_1\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/plagiarism/releases/download/v1.0.2/plagiarism-v1.0.2.tar.gz\\">2019-03-04 1.0.2.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">6</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/pkp/coins\\">pkp &#x2F; coins</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/coins/releases/download/v1.0.3-2/coins-v1.0.3-2.tar.gz\\">2020-06-19 1.0.3.2</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/coins/releases/download/v1.0.3-0/coins-v1.0.3-0.tar.gz\\">2020-02-27 1.0.3.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/coins/releases/download/v1.0.2-1/coins-v1.0.2-1.tar.gz\\">2019-03-04 1.0.2.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/coins/tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/coins/releases/download/coins-1_0_1-0/coins-1_0_1-0.tar.gz\\">2018-03-14 1.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/coins/releases/download/coins-1_0_1-0/coins-1_0_1-0.tar.gz\\">2018-03-14 1.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/coins/releases/download/coins-1_0_1-0/coins-1_0_1-0.tar.gz\\">2018-03-14 1.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/coins/releases/download/v1.0.2-1/coins-v1.0.2-1.tar.gz\\">2019-03-04 1.0.2.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">7</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/pkp/quickSubmit\\">pkp &#x2F; quickSubmit</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/quickSubmit/releases/download/v1_0_5-6/quickSubmit-v1_0_5-6.tar.gz\\">2020-09-02 1.0.5.6</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/quickSubmit/tree/stable-3_2_1\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/quickSubmit/releases/download/v1.0.5-2/quickSubmit-v1.0.5-2.tar.gz\\">2020-04-09 1.0.5.2</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/quickSubmit/tree/stable-3_2_0\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/quickSubmit/releases/download/v1.0.4-1/quickSubmit-v1.0.4-1.tar.gz\\">2019-04-03 1.0.4.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/quickSubmit/tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/quickSubmit/releases/download/ojs-3_1_1-0/quickSubmit-ojs-3_1_1-0.tar.gz\\">2018-04-04 1.0.2.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/quickSubmit/tree/ojs-stable-3_1_1\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/quickSubmit/releases/download/ojs-3_1_0-0/quickSubmit-ojs-3_1_0-0.tar.gz\\">2017-10-21 1.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/quickSubmit/releases/download/ojs-3_0_2-0/quickSubmit-ojs-3_0_2-0.tar.gz\\">2017-02-01 1.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/quickSubmit/releases/download/v1.0.4-1/quickSubmit-v1.0.4-1.tar.gz\\">2019-04-03 1.0.4.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">8</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/ajnyga/allowedUploads\\">ajnyga &#x2F; allowedUploads</a>
+                            </td>
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ajnyga/allowedUploads/releases/download/1.0.0.5/allowedUploads.tar.gz\\">2020-02-25 1.0.0.5</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ajnyga/allowedUploads/releases/download/v.1.0.0.2/allowedUploads.tar.gz\\">2018-07-27 1.0.0.2</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ajnyga/allowedUploads/releases/download/v.1.0/allowedUploads.tar.gz\\">2018-03-15 1.0.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">9</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/pkp/piwik\\">pkp &#x2F; piwik</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/piwik/releases/download/v1.0.3-1/piwik-v1.0.3-1.tar.gz\\">2020-06-19 1.0.3.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/piwik/releases/download/v1.0.3-0/piwik-v1.0.3-0.tar.gz\\">2020-02-27 1.0.3.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/piwik/releases/download/v1.0.2-1/piwik-v1.0.2-1.tar.gz\\">2019-05-14 1.0.2.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/piwik/releases/download/ojs-3_1_1-0/piwik-ojs-3_1_1-0.tar.gz\\">2017-10-21 1.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/piwik/releases/download/ojs-3_1_0-0/piwik-ojs-3_1_0-0.tar.gz\\">2017-10-21 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/piwik/releases/download/piwik-1_0_0/piwik-1.0.0.tar.gz\\">2017-02-03 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/piwik/releases/download/v1.0.2-1/piwik-v1.0.2-1.tar.gz\\">2019-05-14 1.0.2.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">10</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/ojsde/shariff\\">ojsde &#x2F; shariff</a>
+                            </td>
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ojsde/shariff/releases/download/v3_0_0/shariff-3_0_0.tar.gz\\">2018-04-03 3.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ojsde/shariff/releases/download/v3_0_0/shariff-3_0_0.tar.gz\\">2018-04-03 3.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ojsde/shariff/releases/download/v3_0_0/shariff-3_0_0.tar.gz\\">2018-04-03 3.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ojsde/shariff/archive/v2_4_6.tar.gz\\">2017-12-04 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/ojsde/shariff/tree/ojs-stable-2_4_6\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">11</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/pkp/addThis\\">pkp &#x2F; addThis</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/addThis/releases/download/v1_0_3-2/addThis-v1_0_3-2.tar.gz\\">2020-06-25 1.0.3.2</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/addThis/releases/download/v1.0.3-0/addThis-v1.0.3-0.tar.gz\\">2020-02-27 1.0.3.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/addThis/releases/download/v1.0.2-0/addThis-v1.0.2-0.tar.gz\\">2019-03-04 1.0.2.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/addThis/tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/addThis/releases/download/ojs-3_1_1-0/addThis-ojs-3_1_1-0.tar.gz\\">2018-04-04 1.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/addThis/releases/download/ojs-3_1_0-0/addThis-ojs-3_1_0-0.tar.gz\\">2017-10-21 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/addThis/releases/download/1_0_0-0/addThis-3.1.tar.gz\\">2017-04-21 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/addThis/releases/download/v1.0.2-0/addThis-v1.0.2-0.tar.gz\\">2019-03-04 1.0.2.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">12</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/a-vodka/ojs_copernicus_export_plugin/\\">a-vodka &#x2F; ojs_copernicus_export_plugin</a>
+                            </td>
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/a-vodka/ojs_copernicus_export_plugin/releases/download/0.0.4/copernicus-ojs3-0.0.4.tar.gz\\">2019-05-23 0.0.4.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/a-vodka/ojs_copernicus_export_plugin/releases/download/0.0.4/copernicus-ojs3-0.0.4.tar.gz\\">2019-05-23 0.0.4.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/a-vodka/ojs_copernicus_export_plugin/releases/download/0.0.4/copernicus-ojs3-0.0.4.tar.gz\\">2019-05-23 0.0.4.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/a-vodka/ojs_copernicus_export_plugin/releases/download/0.0.4/copernicus-ojs3-0.0.4.tar.gz\\">2019-05-23 0.0.4.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">13</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/asmecher/subscriptionSSO\\">asmecher &#x2F; subscriptionSSO</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/subscriptionSSO/releases/download/v1_0_3-3/subscriptionSSO-v1_0_3-3.tar.gz\\">2020-06-19 1.0.3.3</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/subscriptionSSO/releases/download/v1.0.3-1/subscriptionSSO-v1.0.3-1.tar.gz\\">2020-03-19 1.0.3.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/subscriptionSSO/releases/download/v1.0.2-0/subscriptionSSO-v1.0.2-0.tar.gz\\">2019-03-04 1.0.2.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/asmecher/subscriptionSSO/tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/subscriptionSSO/releases/download/1_0_1-0/subscriptionSSO-1_0_1-0.tar.gz\\">2017-12-12 1.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/asmecher/subscriptionSSO/tree/ojs-stable-3_1_1\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/subscriptionSSO/releases/download/1_0_1-0/subscriptionSSO-1_0_1-0.tar.gz\\">2017-12-12 1.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/subscriptionSSO/releases/download/1_0_1-0/subscriptionSSO-1_0_1-0.tar.gz\\">2017-12-12 1.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/subscriptionSSO/releases/download/v1.0.2-0/subscriptionSSO-v1.0.2-0.tar.gz\\">2019-03-04 1.0.2.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">14</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/ajnyga/funding/\\">ajnyga &#x2F; funding</a>
+                            </td>
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ajnyga/funding/releases/download/2.1.3.1/funding.tar.gz\\">2020-02-27 2.1.3.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ajnyga/funding/releases/download/2.1.2.4/funding.tar.gz\\">2019-05-21 2.1.2.4</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ajnyga/funding/releases/download/2.1.1.5/funding.tar.gz\\">2019-05-21 2.1.1.5</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ajnyga/funding/releases/download/2.1.2.4/funding.tar.gz\\">2019-05-21 2.1.2.4</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">15</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/asmecher/customHeader/\\">asmecher &#x2F; customHeader</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/customHeader/releases/download/v1_0_2-1/customHeader-v1_0_2-1.tar.gz\\">2020-06-19 1.0.2.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/asmecher/customHeader//tree/stable-3_2_1\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/customHeader/releases/download/v1.0.2-0/customHeader-v1.0.2-0.tar.gz\\">2020-02-27 1.0.2.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/asmecher/customHeader//tree/stable-3_2_0\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/customHeader/releases/download/v1.0.1-0/customHeader-v1.0.1-0.tar.gz\\">2019-03-04 1.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/asmecher/customHeader//tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/customHeader/releases/download/ojs-3_1_0-0/customHeader-ojs-3_1_0-0.tar.gz\\">2018-02-19 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/customHeader/releases/download/ojs-3_1_0-0/customHeader-ojs-3_1_0-0.tar.gz\\">2018-02-19 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/customHeader/releases/download/v1.0.1-0/customHeader-v1.0.1-0.tar.gz\\">2019-03-04 1.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">16</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/pkp/customLocale/\\">pkp &#x2F; customLocale</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/customLocale/releases/download/v1_1_0-1/customLocale-v1_1_0-1.tar.gz\\">2020-06-19 1.1.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/customLocale//tree/stable-3_2_1\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/customLocale/releases/download/v1.1.0-0/customLocale-v1.1.0-0.tar.gz\\">2020-05-05 1.1.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/customLocale//tree/stable-3_2_0\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">17</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/pkp/jatsTemplate/\\">pkp &#x2F; jatsTemplate</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/jatsTemplate/releases/download/v1.0.4-0/jatsTemplate-v1.0.4-0.tar.gz\\">2020-06-02 1.0.4.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/jatsTemplate//tree/stable-3_2_1\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/jatsTemplate/releases/download/v1.0.4-0/jatsTemplate-v1.0.4-0.tar.gz\\">2020-06-02 1.0.4.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/jatsTemplate//tree/stable-3_2_0\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/jatsTemplate/releases/download/v1.0.3-0/jatsTemplate-v1.0.3-0.tar.gz\\">2020-06-02 1.0.3.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/jatsTemplate//tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/jatsTemplate/releases/download/v1.0.3-0/jatsTemplate-v1.0.3-0.tar.gz\\">2020-06-02 1.0.3.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/jatsTemplate/releases/download/v1.0.3-0/jatsTemplate-v1.0.3-0.tar.gz\\">2020-06-02 1.0.3.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/jatsTemplate/releases/download/v1.0.3-0/jatsTemplate-v1.0.3-0.tar.gz\\">2020-06-02 1.0.3.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">18</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/asmecher/sword/\\">asmecher &#x2F; sword</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/sword/releases/download/v1_0_4-1/sword-v1_0_4-1.tar.gz\\">2020-06-19 1.0.4.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/sword/releases/download/v1.0.3-0/sword-v1.0.3-0.tar.gz\\">2020-06-10 1.0.3.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/sword/releases/download/v1.0.2-0/sword-v1.0.2-0.tar.gz\\">2019-03-04 1.0.2.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/asmecher/sword//tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/sword/releases/download/v1.0.1-1/sword-v1.0.1-1.tar.gz\\">2019-03-05 1.0.1.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/asmecher/sword//tree/ojs-stable-3_1_1\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/sword/releases/download/v1.0.1-1/sword-v1.0.1-1.tar.gz\\">2019-03-05 1.0.1.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/sword/releases/download/v1.0.2-0/sword-v1.0.2-0.tar.gz\\">2019-03-04 1.0.2.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">19</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/pkp/oaiJats/\\">pkp &#x2F; oaiJats</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/oaiJats/releases/download/v1.0.3-0/oaiJats-v1.0.3-0.tar.gz\\">2020-06-02 1.0.3.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/oaiJats//tree/stable-3_2_1\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/oaiJats/releases/download/v1.0.3-0/oaiJats-v1.0.3-0.tar.gz\\">2020-06-02 1.0.3.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/oaiJats//tree/stable-3_2_0\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/oaiJats/releases/download/v1_0_1-0/oaiJats-v1_0_1-0.tar.gz\\">2018-12-10 1.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/oaiJats//tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/oaiJats/releases/download/v1_0_1-0/oaiJats-v1_0_1-0.tar.gz\\">2018-12-10 1.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/oaiJats/releases/download/v1_0_1-0/oaiJats-v1_0_1-0.tar.gz\\">2018-12-10 1.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/oaiJats/releases/download/v1_0_1-0/oaiJats-v1_0_1-0.tar.gz\\">2018-12-10 1.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">20</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/lepidus/ojs3-keywordcloud-plugin\\">lepidus &#x2F; ojs3-keywordcloud-plugin</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/lepidus/keywordCloud/releases/download/v1.1.0.1/keywordCloud-v1.1.0.1.tar.gz\\">2020-06-03 1.1.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/lepidus/keywordCloud/releases/download/v1.1.0.1/keywordCloud-v1.1.0.1.tar.gz\\">2020-06-03 1.1.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/lepidus/ojs3-keywordcloud-plugin/releases/download/1.0.0.2/keywordCloud.tar.gz\\">2019-12-06 1.0.0.2</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ali-sokhandan/ojs3-keywordcloud-plugin/releases/download/1.0.0.1/keywordCloud.tar.gz\\">2018-03-10 1.0.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ali-sokhandan/ojs3-keywordcloud-plugin/releases/download/1.0.0.1/keywordCloud.tar.gz\\">2018-03-10 1.0.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/lepidus/ojs3-keywordcloud-plugin/releases/download/1.0.0.2/keywordCloud.tar.gz\\">2019-12-06 1.0.0.2</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">21</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/NateWr/bootstrap3\\">NateWr &#x2F; bootstrap3</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/NateWr/bootstrap3/releases/download/v3_2_0-2/bootstrap3-v3_2_0-2.tar.gz\\">2020-08-25 3.2.0.2</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/NateWr/bootstrap3/releases/download/v3_2_0-2/bootstrap3-v3_2_0-2.tar.gz\\">2020-08-25 3.2.0.2</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/NateWr/bootstrap3/releases/download/v3_1_2-6/bootstrap3-v3_1_2-6.tar.gz\\">2019-08-25 3.1.2.6</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/NateWr/bootstrap3/tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/NateWr/bootstrap3/releases/download/v3_1_2-6/bootstrap3-v3_1_2-6.tar.gz\\">2019-08-25 3.1.2.6</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">22</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/pkp/classic\\">pkp &#x2F; classic</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/classic/releases/download/1.0.4/classic-1.0.4.tar.gz\\">2020-06-19 1.0.4.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/classic/tree/stable-3_2_1\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/classic/releases/download/1.0.4/classic-1.0.4.tar.gz\\">2020-06-19 1.0.4.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/classic/releases/download/1.0.1/classic-1.0.1.tar.gz\\">2019-03-19 1.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/classic/tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/classic/releases/download/1.0.0-2/classic-1.0.0-2.tar.gz\\">2019-03-11 1.0.0.2</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/classic/releases/download/1.0.1/classic-1.0.1.tar.gz\\">2019-03-19 1.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">23</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/pkp/healthSciences\\">pkp &#x2F; healthSciences</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/healthSciences/releases/download/1.0.7.0/healthSciences-1.0.7.0.tar.gz\\">2020-06-19 1.0.7.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/healthSciences/tree/stable-3_2_1\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/healthSciences/releases/download/1.0.7.0/healthSciences-1.0.7.0.tar.gz\\">2020-06-19 1.0.7.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/healthSciences/releases/download/1.0.4/healthSciences-1.0.4.tar.gz\\">2019-03-05 1.0.4.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/healthSciences/tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/healthSciences/releases/download/1.0.3/healthSciences-1.0.3.tar.gz\\">2018-12-31 1.0.3.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/healthSciences/releases/download/1.0.4/healthSciences-1.0.4.tar.gz\\">2019-03-05 1.0.4.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">24</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/NateWr/defaultManuscript\\">NateWr &#x2F; defaultManuscript</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/NateWr/defaultManuscript/releases/download/1.0.3/defaultManuscript-1.0.3.0.tar.gz\\">2020-02-27 1.0.3.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/NateWr/defaultManuscript/releases/download/1.0.3/defaultManuscript-1.0.3.0.tar.gz\\">2020-02-27 1.0.3.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/NateWr/defaultManuscript/releases/download/1.0.2/defaultManuscript-1.0.2.tar.gz\\">2018-04-10 1.0.2.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/NateWr/defaultManuscript/tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/NateWr/defaultManuscript/releases/download/1.0.2/defaultManuscript-1.0.2.tar.gz\\">2018-04-10 1.0.2.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/NateWr/defaultManuscript/releases/download/1.0.1/defaultManuscript-1.0.1.0.tar.gz\\">2017-10-24 1.0.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/NateWr/defaultManuscript/releases/download/1.0.0/defaultManuscript-1.0.0.0.tar.gz\\">2017-02-07 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/NateWr/defaultManuscript/releases/download/1.0.2/defaultManuscript-1.0.2.tar.gz\\">2018-04-10 1.0.2.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">25</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/asmecher/texture\\">asmecher &#x2F; texture</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/texture/releases/download/v2.4.2.0/texture-v2.4.2.0.tar.gz\\">2020-08-16 2.4.2.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/asmecher/texture/tree/stable-3_2_1\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/texture/releases/download/v2.4.2.0/texture-v2.4.2.0.tar.gz\\">2020-08-16 2.4.2.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/texture/releases/download/v2.4.1.0/texture-v2.4.1.0.tar.gz\\">2020-08-16 2.4.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/asmecher/texture/tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/asmecher/texture/releases/download/v1.0.0-0/texture-v1.0.0-0.tar.gz\\">2018-09-14 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/asmecher/texture/tree/ojs-stable-3_1_1\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/texture/releases/download/v2.4.1.0/texture-v2.4.1.0.tar.gz\\">2020-08-16 2.4.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">26</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/pkp/crossrefReferenceLinking\\">pkp &#x2F; crossrefReferenceLinking</a>
+                            </td>
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/crossrefReferenceLinking/releases/download/v1.0.0-0/crossrefReferenceLinking-v1.0.0-0.tar.gz\\">2019-03-27 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/crossrefReferenceLinking/tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/crossrefReferenceLinking/releases/download/v1.0.0-0/crossrefReferenceLinking-v1.0.0-0.tar.gz\\">2019-03-27 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">27</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/pkp/immersion\\">pkp &#x2F; immersion</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/immersion/releases/download/1.0.5.0/immersion-1.0.5.tar.gz\\">2020-06-19 1.0.5</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/immersion/tree/stable-3_2_1\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/immersion/releases/download/1.0.5.0/immersion-1.0.5.tar.gz\\">2020-06-19 1.0.5</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/immersion/releases/download/1.0.3/immersion-1.0.3.tar.gz\\">2019-07-02 1.0.3.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/immersion/tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/immersion/releases/download/1.0.1-1/immersion-1.0.1-1.tar.gz\\">2019-03-10 1.0.1.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/immersion/releases/download/1.0.3/immersion-1.0.3.tar.gz\\">2019-07-02 1.0.3.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">28</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/pkp/orcidProfile\\">pkp &#x2F; orcidProfile</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/orcidProfile/releases/download/v1_1_2-5/orcidProfile-v1_1_2-5.tar.gz\\">2020-08-16 1.1.2.5</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/orcidProfile/tree/stable-3_2_1\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/orcidProfile/releases/download/v1.1.2-3/orcidProfile-v1.1.2-3.tar.gz\\">2020-05-31 1.1.2.3</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/orcidProfile/releases/download/v1.1.1-4/orcidProfile-v1.1.1-4.tar.gz\\">2020-05-31 1.1.1.4</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/orcidProfile/tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/orcidProfile/releases/download/v1.1.1-4/orcidProfile-v1.1.1-4.tar.gz\\">2020-05-31 1.1.1.4</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">29</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/pkp/defaultTranslation\\">pkp &#x2F; defaultTranslation</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/defaultTranslation/releases/download/v1_1_1-1/defaultTranslation-v1_1_1-1.tar.gz\\">2020-06-19 1.1.1.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/defaultTranslation/releases/download/v1.1.1-0/defaultTranslation-v1.1.1-0.tar.gz\\">2020-02-27 1.1.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/defaultTranslation/releases/download/ojs-3_1_0-1/defaultTranslation-ojs-3_1_0-1.tar.gz\\">2018-02-21 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/defaultTranslation/tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/defaultTranslation/releases/download/ojs-3_1_0-1/defaultTranslation-ojs-3_1_0-1.tar.gz\\">2018-02-21 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">30</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/pkp/paperbuzz\\">pkp &#x2F; paperbuzz</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/paperbuzz/releases/download/v1_0_2-0/paperbuzz-v1_0_2-0.tar.gz\\">2020-06-19 1.0.2.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/paperbuzz/releases/download/1.0.0.0/paperbuzz-1.0.0.0.tar.gz\\">2019-04-19 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/paperbuzz/tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/paperbuzz/releases/download/1.0.0.0/paperbuzz-1.0.0.0.tar.gz\\">2019-04-19 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">31</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/ojsde/openAIRE\\">ojsde &#x2F; openAIRE</a>
+                            </td>
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ojsde/openAIRE/releases/download/2.0.2.0/openAIRE.tar.gz\\">2020-02-27 2.0.2.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ojsde/openAIRE/releases/download/2.0.1.5/openAIRE.tar.gz\\">2019-05-20 2.0.1.5</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ojsde/openAIRE/releases/download/2.0.0.5/openAIRE.tar.gz\\">2019-05-20 2.0.0.5</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ojsde/openAIRE/releases/download/2.0.1.5/openAIRE.tar.gz\\">2019-05-20 2.0.1.5</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">32</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/withanage/lensGalleyBits\\">withanage &#x2F; lensGalleyBits</a>
+                            </td>
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/withanage/lensGalleyBits/releases/download/V4.0.0.1/lensGalleyBits-V4.0.0.1.tar.gz\\">2020-06-04 4.0.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/withanage/lensGalleyBits/releases/download/V4.0.0.0/lensGalleyBits-V4.0.0.0.tar.gz\\">2019-06-04 4.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/withanage/lensGalleyBits/releases/download/V4.0.0.0/lensGalleyBits-V4.0.0.0.tar.gz\\">2019-06-04 4.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">33</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/4Science/reviewercredits-ojs\\">4Science &#x2F; reviewercredits-ojs</a>
+                            </td>
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/4Science/reviewercredits-ojs/releases/download/1.0.0.0/reviewerCredits.tgz\\">2019-07-08 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/4Science/reviewercredits-ojs/releases/download/1.0.0.0/reviewerCredits.tgz\\">2019-07-08 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">34</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/ulsdevteam/ojs-plum-plugin\\">ulsdevteam &#x2F; ojs-plum-plugin</a>
+                            </td>
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ulsdevteam/ojs-plum-plugin/releases/download/v1.3.0-1/plumAnalytics-1.3.0.1.tar.gz\\">2020-07-03 1.3.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ulsdevteam/ojs-plum-plugin/releases/download/v1.3.0-1/plumAnalytics-1.3.0.1.tar.gz\\">2020-07-03 1.3.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ulsdevteam/ojs-plum-plugin/releases/download/v1.3.0-1/plumAnalytics-1.3.0.1.tar.gz\\">2020-07-03 1.3.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">35</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/ulsdevteam/ojs-sushiLite-plugin\\">ulsdevteam &#x2F; ojs-sushiLite-plugin</a>
+                            </td>
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ulsdevteam/ojs-sushiLite-plugin/releases/download/v1.1.1-0/sushiLite-1.1.1-0.tar.gz\\">2019-06-11 1.1.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ulsdevteam/ojs-sushiLite-plugin/releases/download/v1.1.1-0/sushiLite-1.1.1-0.tar.gz\\">2019-06-11 1.1.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ulsdevteam/ojs-sushiLite-plugin/releases/download/v1.1.1-0/sushiLite-1.1.1-0.tar.gz\\">2019-06-11 1.1.1.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">36</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/ulsdevteam/pkp-betterPassword\\">ulsdevteam &#x2F; pkp-betterPassword</a>
+                            </td>
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ulsdevteam/pkp-betterPassword/releases/download/v1.0.0-1/betterPassword-1.0.0-1.tgz\\">2019-07-17 1.0.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ulsdevteam/pkp-betterPassword/releases/download/v1.0.0-1/betterPassword-1.0.0-1.tgz\\">2019-07-17 1.0.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">37</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/ulsdevteam/pkp-akismet\\">ulsdevteam &#x2F; pkp-akismet</a>
+                            </td>
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ulsdevteam/pkp-akismet/releases/download/v1.2.2-1/akismet-1.2.2-1.tgz\\">2019-07-01 1.2.2.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ulsdevteam/pkp-akismet/releases/download/v1.2.2-1/akismet-1.2.2-1.tgz\\">2019-07-01 1.2.2.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ulsdevteam/pkp-akismet/releases/download/v1.2.2-1/akismet-1.2.2-1.tgz\\">2019-07-01 1.2.2.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">38</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/ulsdevteam/pkp-formHoneypot\\">ulsdevteam &#x2F; pkp-formHoneypot</a>
+                            </td>
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ulsdevteam/pkp-formHoneypot/releases/download/v1.3.0-1/formHoneypot-1.3.0-1.tgz\\">2019-07-03 1.3.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ulsdevteam/pkp-formHoneypot/releases/download/v1.3.0-1/formHoneypot-1.3.0-1.tgz\\">2019-07-03 1.3.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ulsdevteam/pkp-formHoneypot/releases/download/v1.3.0-1/formHoneypot-1.3.0-1.tgz\\">2019-07-03 1.3.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">39</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/ewhanson/authorRequirements\\">ewhanson &#x2F; authorRequirements</a>
+                            </td>
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ewhanson/authorRequirements/releases/download/v1.0.0-1/authorRequirements-1.0.0-1.tar.gz\\">2020-02-26 1.0.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ewhanson/authorRequirements/releases/download/v1.0.0-0/authorRequirements-1.0.0-0.tar.gz\\">2019-10-27 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ewhanson/authorRequirements/releases/download/v1.0.0-0/authorRequirements-1.0.0-0.tar.gz\\">2019-10-27 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">40</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/pkp/registrationNotification\\">pkp &#x2F; registrationNotification</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/registrationNotification/releases/download/v2.0.0.1/registrationNotification-v2.0.0.1.tar.gz\\">2019-11-27 2.0.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/registrationNotification/releases/download/v2.0.0.1/registrationNotification-v2.0.0.1.tar.gz\\">2019-11-27 2.0.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/registrationNotification/releases/download/v2.0.0.1/registrationNotification-v2.0.0.1.tar.gz\\">2019-11-27 2.0.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/registrationNotification/tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/registrationNotification/releases/download/v1.0.0.2/registrationNotification-v1.0.0.2.tar.gz\\">2019-11-27 1.0.0.2</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/registrationNotification/tree/ojs-stable-3_1_1\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/registrationNotification/releases/download/v2.0.0.1/registrationNotification-v2.0.0.1.tar.gz\\">2019-11-27 2.0.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">41</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/pkp/controlPublicFiles\\">pkp &#x2F; controlPublicFiles</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/controlPublicFiles/releases/download/v1_0_0-1/controlPublicFIles-v1_0_0-1.tar.gz\\">2020-02-27 1.0.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/controlPublicFiles/releases/download/1.0.0.0/controlPublicFiles-1.0.0.0.tar.gz\\">2020-02-27 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">42</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/pkp/textEditorExtras\\">pkp &#x2F; textEditorExtras</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/textEditorExtras/releases/download/v1_0_0-2/textEditorExtras-v1_0_0-2.tar.gz\\">2020-06-19 1.0.0.2</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/textEditorExtras/releases/download/1.0.0.1/textEditorExtras-1.0.0.1.tar.gz\\">2020-03-23 1.0.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">43</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/RBoelter/ojs3-twitter-sidebar\\">RBoelter &#x2F; ojs3-twitter-sidebar</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/RBoelter/twitterBlock/releases/download/v1_0_0-1/twitterBlock-v1_0_0-1.tar.gz\\">2020-08-24 1.0.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/RBoelter/ojs3-twitter-sidebar/tree/stable-3_2_1\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/RBoelter/twitterBlock/releases/download/v1_0_0-1/twitterBlock-v1_0_0-1.tar.gz\\">2020-08-24 1.0.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/RBoelter/twitterBlock/releases/download/v1_0_0-1/twitterBlock-v1_0_0-1.tar.gz\\">2020-08-24 1.0.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/RBoelter/ojs3-twitter-sidebar/tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">44</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/RBoelter/announcementsBlock\\">RBoelter &#x2F; announcementsBlock</a>
+                            </td>
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/RBoelter/announcementsBlock/releases/download/1.0.0.0/announcementsBlock-1.0.0.0.tar.gz\\">2020-03-10 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/RBoelter/announcementsBlock/releases/download/1.0.0.0/announcementsBlock-1.0.0.0.tar.gz\\">2020-03-10 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/RBoelter/announcementsBlock/tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">45</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/quoideneuf/swordServer\\">quoideneuf &#x2F; swordServer</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/swordServer/releases/download/v1_0_0-0/swordServer-v1_0_0-0.tar.gz\\">2020-06-19 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/swordServer/releases/download/v0.0.0.1/swordServer-v0.0.0.1.tar.gz\\">2020-03-02 0.0.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">46</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/pkp/returningAuthorScreening\\">pkp &#x2F; returningAuthorScreening</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/returningAuthorScreening/releases/download/v1.0.0-0/returningAuthorScreening-v1.0.0-0.tar.gz\\">2020-03-10 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/returningAuthorScreening/releases/download/v1.0.0-0/returningAuthorScreening-v1.0.0-0.tar.gz\\">2020-03-10 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">47</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/ajnyga/openGraph\\">ajnyga &#x2F; openGraph</a>
+                            </td>
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/ajnyga/openGraph/releases/download/1.0.0.0/openGraph.tar.gz\\">2020-03-29 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">48</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/publons/ojs_3_plugin/\\">publons &#x2F; ojs_3_plugin</a>
+                            </td>
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/publons/ojs_3/releases/download/3.2.2.0/publons.tar.gz\\">2019-10-25 3.2.2.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/publons/ojs_3/releases/download/3.2.2.0/publons.tar.gz\\">2019-10-25 3.2.2.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/publons/ojs_3/releases/download/3.2.2.0/publons.tar.gz\\">2019-10-25 3.2.2.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/publons/ojs_3/releases/download/3.2.2.0/publons.tar.gz\\">2019-10-25 3.2.2.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">49</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/pkp/pragma\\">pkp &#x2F; pragma</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/pragma/releases/download/v1_0_0-1/pragma-v1_0_0-1.tar.gz\\">2020-06-24 1.0.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/pragma/tree/stable-3_2_1\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/pragma/releases/download/v1_0_0-1/pragma-v1_0_0-1.tar.gz\\">2020-06-24 1.0.0.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">50</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/escire/ArchivematicaExportPlugin\\">escire &#x2F; ArchivematicaExportPlugin</a>
+                            </td>
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/escire/ArchivematicaExportPlugin/archive/compat-ojs3.1.2-x.tar.gz\\">2020-07-01 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/escire/ArchivematicaExportPlugin/archive/compat-ojs3.1.x.tar.gz\\">2020-07-01 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/escire/ArchivematicaExportPlugin/archive/compat-ojs3.1.x.tar.gz\\">2020-07-01 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/escire/ArchivematicaExportPlugin/archive/compat-ojs3.1.2-x.tar.gz\\">2020-07-01 1.0.0.0</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                        <tr>
+                            <th scope=\\"row\\">51</th>
+                            <td style=\\"max-width: 150px;overflow: scroll;text-overflow: ellipsis;\\">
+                                <a href=\\"https://github.com/pkp/pln\\">pkp &#x2F; pln</a>
+                            </td>
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/pln/releases/download/v2.0.3-1/pln-v2.0.3-1.tar.gz\\">2020-07-21 2.0.3.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/pln/tree/stable-3_2_1\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/pln/releases/download/v2.0.2-1/pln-v2.0.2-1.tar.gz\\">2020-07-21 2.0.2.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/pln/tree/stable-3_2_0\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/pln/releases/download/v2.0.1-1/pln-v2.0.1-1.tar.gz\\">2020-07-21 2.0.1.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-success\\">
+                                            <a target=\\"_blank\\" href=\\"https://github.com/pkp/pln/tree/stable-3_1_2\\">Remote branch</a>
+                                          </small>
+                                    </td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-secondary text-center\\">-</td>
+                                
+                                    <td class=\\"text-center\\">
+                                        <small>Package: <a href=\\"https://github.com/pkp/pln/releases/download/v2.0.1-1/pln-v2.0.1-1.tar.gz\\">2020-07-21 2.0.1.1</a>
+                                        </small>
+                                        <br/><br/>
+                                          <small class=\\"tiny text-muted\\">No matching branch</small>
+                                    </td>
+                                
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>"
+`;

@@ -4,7 +4,7 @@
   "description": "PKP Plugins Registry CLI",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"no test specified yet\" ",
+    "test": "jest",
     "lint": "eslint . --ext .js"
   },
   "repository": {
@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "@octokit/rest": "^17.8.0",
+    "async": "^3.2.0",
     "chalk": "^4.0.0",
     "execa": "^4.0.0",
     "follow-redirects": "^1.11.0",
@@ -40,6 +41,10 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.2"
+    "eslint-plugin-standard": "^4.0.2",
+    "jest": "^26.6.3"
+  },
+  "jest": {
+    "testTimeout": 120000
   }
 }
