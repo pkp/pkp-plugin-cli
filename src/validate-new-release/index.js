@@ -38,6 +38,10 @@ module.exports = async () => {
     } = extractReleaseDataFromDiff(changedLines)
 
     if (!expectedMD5 || !packageUrl) {
+      if (changedLines) {
+        info('No new packages were added to plugins.xml. The tool will not run further tests.')
+        return shell.exit(0)
+      }
       error(
         'No new releases could be detected in the current folder. Make sure you run the command on a Git repo that has plugins.xml.'
       )
