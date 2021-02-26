@@ -18,7 +18,7 @@ const shell = require('shelljs')
 const checkSumFile = require('../utils/checkSumFile')
 const git = require('../utils/git')
 
-module.exports = async ({ pluginName: fileName, repoUrl, branch = 'master' }) => {
+module.exports = async ({ pluginName: fileName, repoUrl, branch = 'main' }) => {
   info('Building the release')
   debug('Clone the repo to start with a fresh copy')
   const { stdout: cloneTempDir } = await execa('mktemp', ['-d'])
