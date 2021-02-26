@@ -28,7 +28,7 @@ const { error, success, info } = require('../utils/log')
 module.exports = async () => {
   try {
     info('Checking new release')
-    const command = shell.exec('git diff origin/master | grep ^+[^+]')
+    const command = shell.exec('git diff origin/main | grep ^+[^+]')
     const changedLines = command.stdout
 
     // Extract release, md5 data from diff
