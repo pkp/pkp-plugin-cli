@@ -15,6 +15,12 @@ A set of tools by the [Public Knowledge Project](https://docs.pkp.sfu.ca/) to he
 
 To update the tool, run `npm update -g pkp-plugin-cli`
 
+## Publishing a package
+
+- Install [np package](https://github.com/sindresorhus/np) globally: `npm install --global np`
+
+- Run `np` on the command line and follow the wizard.
+
 ## Commands
 
 ### pkp-plugin validate-all-releases --input ./path/to/plugins.xml
