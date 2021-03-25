@@ -7,7 +7,7 @@ jest.mock('../src/generate-site/getRemoteBranches', () => {
   }
 })
 
-describe('generateHTML', () => {
+describe.skip('generateHTML', () => {
   test('generates the final HTML table', async () => {
     // getRemoteBranches
     const rendered = await generateHtml('./__tests/plugins-test.xml')
