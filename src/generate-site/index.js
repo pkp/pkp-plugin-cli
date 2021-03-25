@@ -13,7 +13,7 @@ const shell = require('shelljs')
 const path = require('path')
 const extractCompatibilityMatrix = require('./extractCompatibilityMatrix')
 const { readFile, writeFile } = require('../utils/files')
-const { info, error } = require('../utils/log')
+const { info, error, debug } = require('../utils/log')
 const execa = require('execa')
 const Mustache = require('mustache')
 const git = require('../utils/git')
@@ -64,10 +64,11 @@ module.exports = async args => {
     // Clone compatibility website repo
     const repo = process.env.PLUGINS_SITE_URL || 'https://github.com/pkp/plugin-compatibility.git'
     await git.clone(repo, destinationFolder)
+    debug(`Cloned compatibility ${repo} into ${destinationFolder}`)
 
     // Update the new generated index.html file
     await writeFile(`${destinationFolder}/index.html`, rendered)
-    info(`${destinationFolder}/index.html`)
+    info(`written html file for table: ${destinationFolder}/index.html`)
 
     // commit the new index.html
     await shell.cd(destinationFolder)
@@ -75,7 +76,7 @@ module.exports = async args => {
       await execa('git', ['add', 'index.html'])
       await execa('git', ['commit', '-m', 'Update contents of website'])
     } catch (err) {
-      const nothingToCommit = !!err.message.match(/nothing to commit/);
+      const nothingToCommit = !!err.message.match(/nothing to commit/)
       if (nothingToCommit) {
         error(`It seems like the new generated index.html has not changed from the one in the repo, so it will not be published. Check the output in:
           ${destinationFolder}/index.html`)
@@ -84,11 +85,13 @@ module.exports = async args => {
       throw (err)
     }
 
+    debug('Publishing the site to: https://pkp.github.io/plugin-compatibility/index.html')
     const { GITHUB_TOKEN: githubToken } = process.env
     const gitUrl = await git.getRemoteUrl()
     const gitUrlWithToken = gitUrl.replace(/https:\/\//, `https://${username()}:${githubToken}@`)
     await execa('git', ['remote', 'set-url', 'origin', gitUrlWithToken])
-    await execa('git', ['push', 'origin', 'master'])
+    await execa('git', ['push', 'origin', 'main'])
+    debug('Done!')
   } catch (err) {
     error(err)
     shell.exit(1)
