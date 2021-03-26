@@ -6,11 +6,74 @@
         .tiny {
           font-size: 10px
         }
+        .last-compatible .last-compatible-info {
+            display: block;
+        }
+        .last-compatible .last-compatible-dash {
+            display: none;
+        }
+        .last-compatible.hide-compatible .last-compatible-info {
+            display: none;
+        }
+        .last-compatible.hide-compatible .last-compatible-dash {
+            display: block;
+        }
         </style>
     </head>
+    <script>
+        function resetTable () {
+            const allColumns = document.getElementsByClassName('version-column')
+            for(let i = 0; i<allColumns.length; i++) {
+                allColumns[i].classList.remove("d-none");
+            }
+        }
+        function selectVersion(event) {
+            resetTable()
+            if(event.target.value === '-1') return;
+            const allColumns = document.getElementsByClassName('version-column')
+            for(let i = 0; i<allColumns.length; i++) {
+                if(!allColumns[i].classList.contains(event.target.value)) {
+                    allColumns[i].classList.add("d-none");
+                }
+            }
+        }
+        function showLastCompatibility(event) {
+            console.log(event.target.checked)
+            const elements = document.getElementsByClassName('last-compatible')
+            for(let i = 0; i<elements.length; i++) {
+                if(!event.target.checked) {
+                    elements[i].classList.add("hide-compatible");
+                } else {
+                    elements[i].classList.remove("hide-compatible");
+                }
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('selectVersion').addEventListener("change", selectVersion);
+            document.getElementById('showLastCompatibility').addEventListener("change", showLastCompatibility);
+        }, false);
+    </script>
     <body>
         <div class="container">
             <h1>PKP Plugins</h1>
+            <form  class="form-inline">
+                <div class="form-group">
+                    <select class="form-control" id="selectVersion" onchange="selectVersion">
+                        <option value="-1">Show all versions</option>
+                        {{#releaseVersions}}
+                            <option value="{{version}}"">{{version}}</option>
+                        {{/releaseVersions}}
+                    </select>
+                </div>
+                <div class="form-group mx-sm-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" checked id="showLastCompatibility">
+                        <label class="form-check-label" for="showLastCompatibility">
+                            Show Last Compatible
+                        </label>
+                    </div>
+                </div>
+            </form>
             <div class="table-responsive">
                 <table class="table table-striped">
                     <thead>
@@ -18,7 +81,7 @@
                             <th scope="col">#</th>
                             <th  style="max-width: 150px" scope="col">Plugin Name</th>
                             {{#releaseVersions}}
-                                <th class="text-center" scope="col">{{version}}</th>
+                                <th class="text-center version-column {{version}}" scope="col">{{version}}</th>
                             {{/releaseVersions}}
                             {{! <th scope="col">Localisation</th> }}
                         </tr>
@@ -31,16 +94,24 @@
                                 <a href="{{{url}}}">{{name}}</a>
                             </td>
                             {{#compatibilityMatrix}}
-                                {{^.}}
-                                    <td class="text-secondary text-center">-</td>
-                                {{/.}}
-                                {{#.}}
-                                    <td class="text-center">
-                                        <small><a href="{{{url}}}">{{pluginVersion}}</a>
-                                        </small>
-                                        <br/><br/>
-                                    </td>
-                                {{/.}}
+                                <td class="align-middle text-center version-column {{columnName}}">
+                                    {{#.}}
+                                        {{#pluginVersion}}
+                                            <span>
+                                                <a href="{{{url}}}">{{pluginVersion}}</a>
+                                            </span>
+                                        {{/pluginVersion}}
+                                        {{#lastCompatible}}
+                                            <small class="text-muted last-compatible">
+                                                <span class="last-compatible-info">last compatible: {{lastCompatible}}</span>
+                                                <span class="last-compatible-dash">-</span>
+                                            </small>
+                                        {{/lastCompatible}}
+                                        {{#noData}}
+                                            <small class="muted">-</small>
+                                        {{/noData}}
+                                    {{/.}}
+                                </td>
                                 
                             {{/compatibilityMatrix}}
                         </tr>
