@@ -59,11 +59,24 @@ const extractData = async (filePath, releaseVersions) => {
     // sort them by date to deal with when version number is missing last part (like 1.0.2.0 and 1.0.2) so that we match the newest matching version
     releases.sort(function (a, b) { return new Date(b.date) - new Date(a.date) })
 
-    const compatibilityMatrix = releaseVersions.map(({ version, branchName }) => {
+    const compatibilityMatrix = releaseVersions.map(({ version, branchName }, index) => {
       const matchingRelease = releases.find(r => {
         return r.compatibility.match(version)
       })
-      if (!matchingRelease) return undefined
+      if (!matchingRelease) {
+        for (let i = index; i < releaseVersions.length; i++) {
+          const anyMatch = releases.find(r => {
+            return r.compatibility.match(releaseVersions[i].version)
+          })
+          if (anyMatch) {
+            return {
+              columnName: version,
+              lastCompatible: `${anyMatch.version} for ${releaseVersions[i].version}`
+            }
+          }
+        }
+        return { columnName: version, noData: true }
+      }
 
       const hasBranch = branchName && remoteBranches[homepage][branchName] && `${homepage}/tree/${branchName}`
 
