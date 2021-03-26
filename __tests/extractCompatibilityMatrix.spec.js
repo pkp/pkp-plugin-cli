@@ -58,7 +58,30 @@ describe('extractCompatibilityMatrix', () => {
         pluginVersion: '1.0.0.0',
         url: 'https://github.com/asmecher/hypothesis/releases/download/ojs-3_0_2-0/hypothesis-ojs-3_0_2-0.tar.gz'
       },
-        undefined, undefined, undefined, undefined, undefined, undefined,
+      {
+        columnName: '3.0.1',
+        lastCompatible: '1.0.1.0 for 2.3'
+      },
+      {
+        columnName: '3.0.0',
+        lastCompatible: '1.0.1.0 for 2.3'
+      },
+      {
+        columnName: '2.4.8',
+        lastCompatible: '1.0.1.0 for 2.3'
+      },
+      {
+        columnName: '2.4.7',
+        lastCompatible: '1.0.1.0 for 2.3'
+      },
+      {
+        columnName: '2.4.6',
+        lastCompatible: '1.0.1.0 for 2.3'
+      },
+      {
+        columnName: '2.4.5',
+        lastCompatible: '1.0.1.0 for 2.3'
+      },
       {
         columnName: '2.3',
         date: '2018-04-04',
@@ -66,7 +89,51 @@ describe('extractCompatibilityMatrix', () => {
         url: 'https://github.com/asmecher/hypothesis/releases/download/ojs-3_1_1-0/hypothesis-ojs-3_1_1-0.tar.gz'
       }]
     })
-    expect(result[50]).toEqual({ compatibilityMatrix: [{ columnName: '3.2.1', date: '2020-07-21', pluginVersion: '2.0.3.1', url: 'https://github.com/pkp/pln/releases/download/v2.0.3-1/pln-v2.0.3-1.tar.gz' }, { columnName: '3.2.0', date: '2020-07-21', pluginVersion: '2.0.2.1', url: 'https://github.com/pkp/pln/releases/download/v2.0.2-1/pln-v2.0.2-1.tar.gz' }, { columnName: '3.1.2', date: '2020-07-21', pluginVersion: '2.0.1.1', url: 'https://github.com/pkp/pln/releases/download/v2.0.1-1/pln-v2.0.1-1.tar.gz' }, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, { columnName: '2.3', date: '2020-07-21', pluginVersion: '2.0.1.1', url: 'https://github.com/pkp/pln/releases/download/v2.0.1-1/pln-v2.0.1-1.tar.gz' }], name: 'pkp / pln', url: 'https://github.com/pkp/pln' })
+    expect(result[50]).toEqual({
+      compatibilityMatrix: [{ columnName: '3.2.1', hasBranch: undefined, date: '2020-07-21', pluginVersion: '2.0.3.1', url: 'https://github.com/pkp/pln/releases/download/v2.0.3-1/pln-v2.0.3-1.tar.gz' },
+        { columnName: '3.2.0', hasBranch: undefined, date: '2020-07-21', pluginVersion: '2.0.2.1', url: 'https://github.com/pkp/pln/releases/download/v2.0.2-1/pln-v2.0.2-1.tar.gz' },
+        { columnName: '3.1.2', hasBranch: undefined, date: '2020-07-21', pluginVersion: '2.0.1.1', url: 'https://github.com/pkp/pln/releases/download/v2.0.1-1/pln-v2.0.1-1.tar.gz' },
+        {
+          columnName: '3.1.1',
+          lastCompatible: '2.0.1.1 for 2.3'
+        },
+        {
+          columnName: '3.1.0',
+          lastCompatible: '2.0.1.1 for 2.3'
+        },
+        {
+          columnName: '3.0.2',
+          lastCompatible: '2.0.1.1 for 2.3'
+        },
+        {
+          columnName: '3.0.1',
+          lastCompatible: '2.0.1.1 for 2.3'
+        },
+        {
+          columnName: '3.0.0',
+          lastCompatible: '2.0.1.1 for 2.3'
+        },
+        {
+          columnName: '2.4.8',
+          lastCompatible: '2.0.1.1 for 2.3'
+        },
+        {
+          columnName: '2.4.7',
+          lastCompatible: '2.0.1.1 for 2.3'
+        },
+        {
+          columnName: '2.4.6',
+          lastCompatible: '2.0.1.1 for 2.3'
+        },
+        {
+          columnName: '2.4.5',
+          lastCompatible: '2.0.1.1 for 2.3'
+        },
+        { columnName: '2.3', hasBranch: undefined, date: '2020-07-21', pluginVersion: '2.0.1.1', url: 'https://github.com/pkp/pln/releases/download/v2.0.1-1/pln-v2.0.1-1.tar.gz' }
+      ],
+      name: 'pkp / pln',
+      url: 'https://github.com/pkp/pln'
+    })
   })
 
   test('creates a column for each release', async () => {
@@ -86,20 +153,26 @@ describe('extractCompatibilityMatrix', () => {
           date: '2020-06-19',
           columnName: '3.2.1',
           url: 'https://github.com/kabaros/hypothesis/releases/download/v1.0.3-2/hypothesis-v1.0.3-2.tar.gz',
-          pluginVersion: '1.0.3.2'
+          pluginVersion: '1.0.3.2',
+          hasBranch: undefined
         },
         {
           date: '2020-06-19',
           columnName: '3.2.0',
           url: 'https://github.com/kabaros/hypothesis/releases/download/v1.0.3-2/hypothesis-v1.0.3-2.tar.gz',
-          pluginVersion: '1.0.3.2'
+          pluginVersion: '1.0.3.2',
+          hasBranch: undefined
         },
-        undefined,
+        {
+          columnName: '2.4.8',
+          lastCompatible: '1.0.1.0 for 2.3'
+        },
         {
           date: '2018-04-04',
           columnName: '2.3',
           url: 'https://github.com/kabaros/hypothesis/releases/download/ojs-3_1_1-0/hypothesis-ojs-3_1_1-0.tar.gz',
-          pluginVersion: '1.0.1.0'
+          pluginVersion: '1.0.1.0',
+          hasBranch: undefined
         }]
     })
   })
