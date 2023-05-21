@@ -19,6 +19,8 @@ const { readFile } = require('../utils/files')
 const { debug, error } = require('../utils/log')
 const map = require('lodash/map')
 const flatten = require('lodash/flatten')
+var request = require('sync-request')
+
 const getRemoteBranches = require('./getRemoteBranches')
 
 const parser = new xml2js.Parser()
@@ -77,16 +79,44 @@ const extractData = async (filePath, releaseVersions) => {
         }
         return { columnName: version, noData: true }
       }
-
       const hasBranch = branchName && remoteBranches[homepage][branchName] && `${homepage}/tree/${branchName}`
 
-      return {
-        columnName: version,
-        pluginVersion: matchingRelease.version,
-        date: matchingRelease.date,
-        url: matchingRelease.url,
-        hasBranch
+      const compatibilityValues =
+          {
+            columnName: version,
+            pluginVersion: matchingRelease.version,
+            date: matchingRelease.date,
+            url: matchingRelease.url,
+            hasBranch
+          }
+      if (hasBranch) {
+        const pluginRepo = homepage.replace('https://github.com/', '')
+        try {
+          const result = request('get', 'https://api.travis-ci.com/repos/' + `${pluginRepo}/branches/${branchName}`, {
+            headers: {
+              Accept: 'application/vnd.travis-ci.2.1+json',
+              Host: 'api.travis-ci.com'
+            }
+          }
+          )
+          const json = JSON.parse(result.getBody().toString())
+          if (json && json.branch && json.branch.state !== '') {
+            compatibilityValues.travisLink = `https://app.travis-ci.com/github/${pluginRepo}/builds/` + json.branch.id
+            if (json.branch.state === 'passed') {
+              compatibilityValues.travisStatusPassed = true
+            }
+            if (json.branch.state === 'errored') {
+              compatibilityValues.travisStatusErrored = true
+            }
+          }
+        } catch (e) {
+          debug(e.toString())
+        }
       }
+      if (!compatibilityValues.travisStatusErrored && !compatibilityValues.travisStatusPassed) {
+        compatibilityValues.travisStatusUndefined = true
+      }
+      return compatibilityValues
     })
 
     return {
