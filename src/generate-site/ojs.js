@@ -18,14 +18,29 @@ const listBranches = async () => {
     auth: `token ${token}`
   })
 
-  let result = await octokit.repos.listBranches({
-    owner: 'pkp',
-    repo: 'ojs'
-  })
+  let pagesRemaining = true
+  let page = 1
+  const resultsPerPage = 100
+  let results = []
+  while (pagesRemaining) {
+    const pagedResult = await octokit.repos.listBranches({
+      owner: 'pkp',
+      repo: 'ojs',
+      page: page,
+      per_page: resultsPerPage
+    })
 
-  result = result.data.filter(branch => branch.name.match(/stable/))
+    results = [...results, ...pagedResult.data]
+    page++
 
-  return result
+    if (pagedResult.data.length === 0 || pagedResult.data.length < resultsPerPage) {
+      pagesRemaining = false
+    }
+  }
+
+  results = results.filter(branch => branch.name.match(/stable/))
+
+  return results
 }
 
 module.exports = { listBranches }
