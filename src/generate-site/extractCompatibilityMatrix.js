@@ -62,61 +62,82 @@ const extractData = async (filePath, releaseVersions) => {
     releases.sort(function (a, b) { return new Date(b.date) - new Date(a.date) })
 
     const compatibilityMatrix = releaseVersions.map(({ version, branchName }, index) => {
-      const matchingRelease = releases.find(r => {
+      
+      const matchingRelease = releases.filter(r => {
         return r.compatibility.match(version)
-      })
-      if (!matchingRelease) {
+      });
+
+      if (matchingRelease.length <= 0) {
         for (let i = index; i < releaseVersions.length; i++) {
           const anyMatch = releases.find(r => {
             return r.compatibility.match(releaseVersions[i].version)
           })
           if (anyMatch) {
-            return {
+            
+            return [{
               columnName: version,
               lastCompatible: `${anyMatch.version} for ${releaseVersions[i].version}`
-            }
+            }]
           }
         }
-        return { columnName: version, noData: true }
+
+        return { 
+          columnName: version, 
+          noData: true,
+        }
       }
+
       const hasBranch = branchName && remoteBranches[homepage][branchName] && `${homepage}/tree/${branchName}`
 
-      const compatibilityValues =
+      let compatibilityValuesList = [];
+
+      for (let k = 0; k < matchingRelease.length; k++)
+      {
+        let compatibilityValues =
           {
             columnName: version,
-            pluginVersion: matchingRelease.version,
-            date: matchingRelease.date,
-            url: matchingRelease.url,
+            pluginVersion: matchingRelease[k].version,
+            date: matchingRelease[k].date,
+            url: matchingRelease[k].url,
             hasBranch
           }
-      if (hasBranch) {
-        const pluginRepo = homepage.replace('https://github.com/', '')
-        try {
-          const result = request('get', 'https://api.travis-ci.com/repos/' + `${pluginRepo}/branches/${branchName}`, {
-            headers: {
-              Accept: 'application/vnd.travis-ci.2.1+json',
-              Host: 'api.travis-ci.com'
+      
+        if (hasBranch) {
+          const pluginRepo = homepage.replace('https://github.com/', '')
+          try {
+            const result = request('get', 'https://api.travis-ci.com/repos/' + `${pluginRepo}/branches/${branchName}`, {
+              headers: {
+                Accept: 'application/vnd.travis-ci.2.1+json',
+                Host: 'api.travis-ci.com'
+              }
             }
+            )
+            const json = JSON.parse(result.getBody().toString())
+            if (json && json.branch && json.branch.state !== '') {
+              compatibilityValues.travisLink = `https://app.travis-ci.com/github/${pluginRepo}/builds/` + json.branch.id
+              if (json.branch.state === 'passed') {
+                compatibilityValues.travisStatusPassed = true
+              }
+              if (json.branch.state === 'errored') {
+                compatibilityValues.travisStatusErrored = true
+              }
+            }
+          } catch (e) {
+            debug(e.toString())
           }
-          )
-          const json = JSON.parse(result.getBody().toString())
-          if (json && json.branch && json.branch.state !== '') {
-            compatibilityValues.travisLink = `https://app.travis-ci.com/github/${pluginRepo}/builds/` + json.branch.id
-            if (json.branch.state === 'passed') {
-              compatibilityValues.travisStatusPassed = true
-            }
-            if (json.branch.state === 'errored') {
-              compatibilityValues.travisStatusErrored = true
-            }
-          }
-        } catch (e) {
-          debug(e.toString())
         }
+
+        if (!compatibilityValues.travisStatusErrored && !compatibilityValues.travisStatusPassed) {
+          compatibilityValues.travisStatusUndefined = true
+        }
+
+        compatibilityValuesList.push(compatibilityValues);
       }
-      if (!compatibilityValues.travisStatusErrored && !compatibilityValues.travisStatusPassed) {
-        compatibilityValues.travisStatusUndefined = true
-      }
-      return compatibilityValues
+
+      return {
+        columnName: version,
+        items: compatibilityValuesList,
+      };
     })
 
     return {

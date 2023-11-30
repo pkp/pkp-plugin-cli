@@ -26,6 +26,7 @@
                 }
             }
         }
+
         function showLastCompatibility(event) {
             const elements = document.getElementsByClassName('last-compatible')
             for(let i = 0; i<elements.length; i++) {
@@ -85,7 +86,7 @@
                             </td>
                             {{#compatibilityMatrix}}
                                 <td class="align-middle text-center version-column {{columnName}}">
-                                    {{#.}}
+                                    {{#items}}
                                         {{#pluginVersion}}
                                             <span class="text-nowrap">
                                                  {{#travisStatusPassed}}
@@ -112,7 +113,7 @@
                                         {{#noData}}
                                             <small class="muted">-</small>
                                         {{/noData}}
-                                    {{/.}}
+                                    {{/items}}
                                 </td>
                                 
                             {{/compatibilityMatrix}}
