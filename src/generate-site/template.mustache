@@ -88,17 +88,7 @@
                                     {{#.}}
                                         {{#pluginVersion}}
                                             <span class="text-nowrap">
-                                                 {{#travisStatusPassed}}
-                                                     <a href="{{{travisLink}}}"><i class="bi bi-check-circle-fill text-success"></i></a>
-                                                     <a href="{{{url}}}" class="text-success">{{pluginVersion}}</a>
-                                                 {{/travisStatusPassed}}
-                                                {{#travisStatusErrored}}
-                                                    <a href="{{{travisLink}}}"><i class="bi bi-x-circle-fill text-danger"></i></a>
-                                                    <a href="{{{url}}}" class="text-danger">{{pluginVersion}}</a>
-                                                {{/travisStatusErrored}}
-                                                {{#travisStatusUndefined}}
-                                                    <a href="{{{url}}}" class="text-primary">{{pluginVersion}}</a>
-                                                {{/travisStatusUndefined}}
+                                                <a href="{{{url}}}" class="text-primary">{{pluginVersion}}</a>
                                             </span>
                                         {{/pluginVersion}}
                                         {{#lastCompatible}}
