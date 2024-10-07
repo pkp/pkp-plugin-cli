@@ -8,7 +8,7 @@
  *
  * This helper performs these actions:
  * - prompts the user to run any extra build commands in the current folder (gulp build, composer install etc..)
- * - creates a Tar file from the current folder (in preparation to uploading it as an asset to the Github release)
+ * - creates a Tar file from the current folder (in preparation to uploading it as an asset to the GitHub release)
  */
 const { error, log, warn, info, debug } = require('../utils/log')
 const execa = require('execa')
@@ -48,20 +48,20 @@ module.exports = async ({ pluginName: fileName, repoUrl, branch = 'main' }) => {
       info('No composer.json file found')
     }
 
-    if (fs.existsSync('./gulpfile.js')) {
-      info('Gulp file detected. The tool will run "gulp build".')
-      const { stderr } = await execa('gulp', ['build'])
-      error(stderr)
-    } else {
-      debug('No gulp file file found')
-    }
-
     if (fs.existsSync('./package.json')) {
       info('Package.json file detected. The tool will run "npm install".')
       const { stderr } = await execa('npm', ['install'])
       error(stderr)
     } else {
-      debug('No package.json file file found')
+      debug('No package.json file found')
+    }
+
+    if (fs.existsSync('./gulpfile.js')) {
+      info('Gulp file detected. The tool will run "gulp build".')
+      const { stderr } = await execa('gulp', ['build'])
+      error(stderr)
+    } else {
+      debug('No gulp file found')
     }
   } catch (err) {
     error(err)
