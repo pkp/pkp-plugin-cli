@@ -98,7 +98,7 @@ module.exports = async ({ pluginName: fileName, repoUrl, branch = 'main' }) => {
 const deleteExtraFiles = (fileName) => {
   shell.rm('-rf', '.git')
   debug('Deleting files defined in exclusions.txt')
-  const exclusionsFile = shell.head('./exclusions.txt').toString()
+  const exclusionsFile = shell.cat('./exclusions.txt').toString()
   const folderPrefix = new RegExp('^' + fileName + '/')
   exclusionsFile.split('\n').forEach(file => {
     if (!file) return
