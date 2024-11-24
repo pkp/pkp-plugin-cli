@@ -73,6 +73,9 @@ module.exports = async args => {
     // commit the new index.html
     await shell.cd(destinationFolder)
     try {
+
+      await execa('git', ['config', '--global', 'user.name', 'pkp-machine-user'])
+      await execa('git', ['config', '--global', 'user.email', 'pkp-machine-user@users.noreply.github.com'])
       await execa('git', ['add', 'index.html'])
       await execa('git', ['commit', '-m', 'Update contents of website'])
     } catch (err) {
