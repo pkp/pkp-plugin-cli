@@ -6,6 +6,8 @@ A set of tools by the [Public Knowledge Project](https://docs.pkp.sfu.ca/) to he
 
 Download and install Node (>v12), or check if it's already installed with `node -v`.
 
+If you are releasing a new version of a plugin, you will need to generate a personal access token on GitHub.
+
 ## Install
 
 To install the tool, run:
